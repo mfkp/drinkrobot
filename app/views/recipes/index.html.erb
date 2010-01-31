@@ -1,0 +1,24 @@
+<h1>Listing recipes</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Picture</th>
+  </tr>
+
+<% for recipe in @recipes %>
+  <tr>
+    <td><%=h recipe.id %></td>
+    <td><%=h recipe.name %></td>
+    <td><%=h recipe.picture %></td>
+    <td><%= link_to 'Show', recipe %></td>
+    <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
+    <td><%= link_to 'Destroy', recipe, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New recipe', new_recipe_path %>

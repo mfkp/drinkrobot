@@ -1,0 +1,18 @@
+<h1>Listing ingredients_recipes_quantities</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% for ingredients_recipes_quantities in @ingredients_recipes_quantities %>
+  <tr>
+    <td><%= link_to 'Show', ingredients_recipes_quantities %></td>
+    <td><%= link_to 'Edit', edit_ingredients_recipes_quantities_path(ingredients_recipes_quantities) %></td>
+    <td><%= link_to 'Destroy', ingredients_recipes_quantities, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New ingredients_recipes_quantities', new_ingredients_recipes_quantities_path %>

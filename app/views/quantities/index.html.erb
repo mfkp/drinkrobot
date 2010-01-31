@@ -1,0 +1,18 @@
+<h1>Listing quantities</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% for quantities in @quantities %>
+  <tr>
+    <td><%= link_to 'Show', quantities %></td>
+    <td><%= link_to 'Edit', edit_quantities_path(quantities) %></td>
+    <td><%= link_to 'Destroy', quantities, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New quantities', new_quantities_path %>

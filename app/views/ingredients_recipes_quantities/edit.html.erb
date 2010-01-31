@@ -1,0 +1,12 @@
+<h1>Editing ingredients_recipes_quantities</h1>
+
+<% form_for(@ingredients_recipes_quantities) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @ingredients_recipes_quantities %> |
+<%= link_to 'Back', ingredients_recipes_quantities_path %>

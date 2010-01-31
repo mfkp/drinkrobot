@@ -1,0 +1,12 @@
+<h1>Editing quantities</h1>
+
+<% form_for(@quantities) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @quantities %> |
+<%= link_to 'Back', quantities_path %>
