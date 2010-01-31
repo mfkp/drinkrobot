@@ -13,11 +13,12 @@ class RecipesController < ApplicationController
   # GET /recipes/search/string
   # GET /recipes/search/string.xml
   def search
-  	@ingredients = Ingredient.find_all_by_name(params[:name])
+	@results = Ingredient.search(params[:name])
 
     respond_to do |format|
       format.html # search.html.erb
       format.xml  { render :xml => @recipes }
+      format.json { render :json => @results }
     end
   end
 
@@ -31,6 +32,7 @@ class RecipesController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @recipe }
+      format.json { render :json => @recipe }
     end
   end
 

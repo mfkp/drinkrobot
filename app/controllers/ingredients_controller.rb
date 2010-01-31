@@ -9,6 +9,18 @@ class IngredientsController < ApplicationController
       format.xml  { render :xml => @ingredients }
     end
   end
+  
+  # GET /ingredients/search/string
+  # GET /ingredients/search/string.xml
+  def search
+	@results = Ingredient.search(params[:name])
+
+    respond_to do |format|
+      ActiveRecord::Base.include_root_in_json = false
+      format.html { render :json => @results.to_json(:only => [:id, :name]) }
+      format.xml  { render :xml => @ingredients }
+    end
+  end
 
   # GET /ingredients/1
   # GET /ingredients/1.xml

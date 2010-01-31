@@ -1,7 +1,10 @@
+<p>Search Results</p>
 <ul>
-<% @ingredients.each do |ingredient| %>
+<% @results.each do |result| %>
 <li>
-	<%= ingredient.name %>
+	<%= result.name %>
 </li>
 <% end %>
 </ul>
+
+<%= @results.to_json(:only => [:name, :id]) %>
