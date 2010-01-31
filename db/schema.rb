@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(:version => 20100131084503) do
     t.string   "picture"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "instructions"
+    t.text     "instructions"
   end
 
 end
