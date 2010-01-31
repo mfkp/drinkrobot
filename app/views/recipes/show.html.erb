@@ -4,10 +4,12 @@
 </p>
 
 <p>
-  <b>Ingredients:</b><%= @ingredients.length %>
+  <b>Ingredients:</b>
   <ul>
+  <% count = 0 %>
   <% @ingredients.each do |ingredient|
-  %><li><%= ingredient.name %></li>
+  %><li><%= @quantities[count].quantity %> <%= ingredient.name %></li>
+  <% count = count + 1 %>
   <% end %>
    </ul>
 </p>

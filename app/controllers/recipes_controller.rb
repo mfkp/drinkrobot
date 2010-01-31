@@ -26,6 +26,7 @@ class RecipesController < ApplicationController
   def show
     @recipe = Recipe.find(params[:id])
     @ingredients = @recipe.ingredients
+    @quantities = @recipe.quantities
 
     respond_to do |format|
       format.html # show.html.erb
