@@ -1,0 +1,402 @@
+
+html,body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background: #000000 url(/images/img01.jpg) repeat left top;
+	font-size: 14px;
+	font-family:Arial, Helvetica, sans-serif;
+	text-align: justify;
+	color: #ABABAB;
+}
+
+h3 {
+	margin: 0;
+	font-weight: normal;
+	color: #559106;
+}
+
+h2 {
+	margin: 0;
+	font-weight: normal;
+	color: #559106;
+}
+
+h1 {
+	margin: 0;
+	font-weight: normal;
+	color: #559106;
+}
+
+h1 {
+	letter-spacing: -1px;
+	font-size: 32px;
+}
+
+h2 {
+	font-size: 23px;
+}
+
+a:link {
+	color: #A5E543;
+}
+
+a:active {
+	text-decoration: none;
+	color: #A5E543;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #A5E543;
+}
+
+a:visited {
+	color: #A5E543;
+}
+
+img {
+	border: none;
+}
+
+img.left {
+	float: left;
+	margin-right: 15px;
+}
+
+img.right {
+	float: right;
+	margin-left: 15px;
+}
+
+/* Form */
+
+form {
+	margin: 0;
+	padding: 0;
+}
+
+fieldset {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+legend {
+	display: none;
+}
+
+select {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #333333;
+}
+
+textarea {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #333333;
+}
+
+input {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #333333;
+}
+
+#wrapper {
+	margin: 0;
+	padding: 0;
+	height: 200px;
+	background: url(/images/img02.jpg) repeat-x left top;
+}
+
+/* Header */
+
+#header {
+	width: 810px;
+	margin: 0 auto;
+	height: 60px;
+}
+
+
+/** LOGO */
+
+#logo {
+	width: 810px;
+	height: 200px;
+	margin: 0 auto;
+	background: url(/images/pmd.png) no-repeat center bottom;
+}
+
+#logo h2 {
+	margin: 0;
+	padding: 0 0 0 100px;
+	line-height: normal;
+}
+
+#logo h1 {
+	margin: 0;
+	padding: 0 0 0 100px;
+	line-height: normal;
+}
+
+#logo h1 { 
+	padding-top: 105px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size:40px;
+}
+
+#logo h1 a {
+	text-decoration: none;
+	color: #FFFFFF; 
+}
+
+#logo h1 a:hover { text-decoration: underline; }
+
+#logo h2 {
+	float: left;
+	padding: 0px 0 0 100px;
+	font: 18px Georgia, "Times New Roman", Times, serif;
+	color: #9B9B9B; 
+}
+
+#logo p a {
+	text-decoration: none;
+	color: #B6ACA2;
+}
+
+#logo p a:hover { text-decoration: underline; }
+
+
+
+/* Page */
+
+#page {
+	width: 810px;
+	margin: 0 auto;
+}
+
+/* Content */
+
+#content {
+	float: left;
+	width: 520px;
+	margin-top: 15px;
+}
+
+
+
+/* Sidebar */
+
+#sidebar {
+	float: right;
+	width: 250px;
+	margin: 0;
+	padding: 0;
+	margin-top: 30px;
+}
+
+#sidebar ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#sidebar li {
+	margin-bottom: 40px;
+}
+
+#sidebar li ul {
+}
+
+#sidebar li li {
+	margin: 0;
+	padding-left: 25px;
+}
+
+#sidebar h2 {
+	width: 250px;
+	height: 60px;
+	padding: 8px 0 0 25px;
+	margin-bottom: 10
+	font-size: 20px;
+	color: #DADADA;
+}
+
+/* Search */
+
+#search {
+
+}
+
+#search h2 {
+	margin-bottom: 20px;
+}
+
+#s {
+	width: 140px;
+	margin-left: 25px;
+	margin-right: 5px;
+	padding: 3px;
+	border: 1px solid #BED99C;
+}
+
+#x {
+	padding: 3px;
+	border: none;
+	background: #467805;
+	text-transform: lowercase;
+	font-size: 11px;
+	color: #FFFFFF;
+}
+
+#pimp {
+	margin-left: 80px;
+	margin-right: 5px;
+
+	padding: 3px;
+	border: none;
+	background: #467805;
+	text-transform: lowercase;
+	font-size: 11px;
+	color: #FFFFFF;
+}
+
+
+/* Boxes */
+
+.box1 {
+	padding: 20px;
+}
+
+.box2 {
+	color: #BABABA;
+}
+
+.box2 h2 {
+	margin-bottom: 15px;
+	font-size: 16px;
+	color: #FFFFFF;
+}
+
+.box2 ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.box2 a:visited  {
+	color: #EDEDED;
+}
+
+.box2 a:active  {
+	color: #EDEDED;
+}
+
+.box2 a:hover  {
+	color: #EDEDED;
+}
+
+.box2 a:link  {
+	color: #EDEDED;
+}
+
+/* Footer */
+#footer-wrap {
+	width: 810px;
+	height: 60px;
+	margin: 0 auto;
+}
+
+#footer {
+	margin: 0 auto;
+	margin-bottom: 20px;
+	padding: 0;
+}
+
+html>body #footer {
+	height: auto;
+}
+
+#footer p {
+	font-size: 14px;
+}
+
+#legal {
+	clear: both;
+	padding-top: 17px;
+	text-align: center;
+	color: #999999;
+	
+}
+
+#legal a {
+	color: #A5E543;
+}
+
+#footer a {
+	color: black;
+}
+
+/* Sets the width of the footer content */
+#footer #width {
+  z-index: 3;
+  font-size: 0.85em;
+  padding-top: 0px;
+}
+
+#width {
+  /* max-width hack for IE since it doesn't understand the valid css property */
+  width: expression(document.body.clientWidth > 1000 ? "810px" : "94%");  
+  max-width: 810px;
+  margin: 0 auto;
+}
+
+
+/**************************************************************
+   Width classes used by the site columns
+ **************************************************************/
+
+.width100 {
+  width: 100%;
+}
+
+.width75 {
+  width: 74%;
+}
+
+.width50 {
+  width: 49.7%;
+}
+
+.width33 {
+  width: 32.7%;
+}
+
+.width25 {
+  width: 24.7%;
+}
+
+
+
+/**************************************************************
+   Alignment classes
+ **************************************************************/
+
+.floatLeft {
+  float: left;
+}
+
+.floatRight {
+	float: right;
+	color: #000000;
+}
+
+.alignLeft {
+  text-align: left;
+}
+
+.alignRight {
+  text-align: right;
+}
