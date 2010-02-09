@@ -29,8 +29,21 @@
       }
       
     </style>
+    <script type="text/javascript"> 
+    $(document).ready(function() {
+        $("#tokenize").tokenInput("/ingredients/search/", {
+            hintText: "Type in the names of the drinks you have",
+            noResultsText: "No results",
+            searchingText: "Searching..."
+        });
+    });
+    </script> 
   </head>
   <body>
+  	<div> 
+        <h2>Ingredients</h2> 
+        <input type="text" id="tokenize" name="blah" /> 
+    </div>
     <center>
   	<img src="images/buzz.png">
     <h1>DrinkRobot.com</h1>
