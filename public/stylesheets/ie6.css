@@ -1,0 +1,17 @@
+a.folio-p { margin-left: 60px; }
+
+#portfolio-content div.imginfo { height: 35.5% }
+
+#folio-thumbs { width: 505px }
+
+.has-more .more-arr {
+	display: block;
+	background: transparent url('../images/more-arr-gray-ie6.png') no-repeat center;
+	border-top: 1px solid white;
+}
+.date { width: auto; }
+
+#ie6-fix {
+	margin-top: 12px;
+	margin-left: -57px;
+}

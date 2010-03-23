@@ -1,0 +1,13 @@
+body { cursor: default }
+
+h4.item-h {
+	margin-top: 0px;
+}
+div.item-info img.mail { margin-top: 4px }
+
+.date { width: 100%; }
+
+a.lightbox img:hover  {
+	filter: alpha(opacity=40);
+	cursor: url(../images/ico-enlarge.png);
+}
