@@ -108,9 +108,11 @@ blockquote {
 }
 #logo-container a:hover, #folio-logo-container a:hover { border: none }
 #page-title {
+	background: url(/images/drinkrobot.png) no-repeat 57% 100%;
 	float: left;
-	margin-left: 77px;
-	width: 45.3%; /*580px;*/
+	margin: 0px auto;
+	width: 100%;
+	height: 200px;
 }
 #page-title p { width: 580px }
  
