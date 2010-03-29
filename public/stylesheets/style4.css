@@ -598,9 +598,6 @@ a.lightbox img:hover  {
 	background: #2f3337;
 	border-top: 1px solid #52575D;
 }
-#footer div {
-	display: inline;
-}
 #footer p.tip {
 	display: none;
 	margin-right: 20px;
@@ -613,6 +610,10 @@ a.lightbox img:hover  {
 	height: 15px;
 }
 #footer ul li a { border: none }
+.div-width{
+	margin: 0px auto;
+	max-width: 780px;
+}
 
 /*Buttons*/
 .button, .button:visited {
