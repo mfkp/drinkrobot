@@ -4,6 +4,18 @@
   <%= f.error_messages %>
 
   <p>
+    <%= f.label :recipe_id %><br />
+    <%= f.text_field :recipe_id %>
+  </p>
+  <p>
+  	<%= f.label :ingredient_id %><br />
+  	<%= f.text_field :ingredient_id %>
+  </p>
+  <p>
+    <%= f.label :quantity_id %><br />
+    <%= f.text_field :quantity_id %>
+  </p>
+  <p>
     <%= f.submit "Create" %>
   </p>
 <% end %>

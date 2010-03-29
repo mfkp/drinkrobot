@@ -1,21 +1,22 @@
-<p>
-  <b>Name:</b>
+<div>
+<h4 style="display:inline;">
   <%=h @recipe.name %>
-</p>
+</h4>
+<span style="float:right;"><a href="#"><img src="/images/heart_add.png" /> Add to Favorites</a></span>
+</div>
 
 <p>
-  <b>Ingredients:</b>
   <ul>
   <% count = 0 %>
-  <% @ingredients.each do |ingredient|
-  %><li><%= @quantities[count].quantity %> <%= ingredient.name %></li>
+  <% @ingredients.each do |ingredient| %>
+  <li><%= @quantities[count].quantity %> <%= ingredient.name %></li>
   <% count = count + 1 %>
   <% end %>
    </ul>
 </p>
 
 <p>
-  <b>Directions:</b>
+  <b>Mixing Instructions:</b>
   <%=h @recipe.instructions %>
 </p>
 

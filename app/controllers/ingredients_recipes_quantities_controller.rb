@@ -2,7 +2,7 @@ class IngredientsRecipesQuantitiesController < ApplicationController
   # GET /ingredients_recipes_quantities
   # GET /ingredients_recipes_quantities.xml
   def index
-    @ingredients_recipes_quantities = IngredientsRecipesQuantities.find(:all)
+    @ingredients_recipes_quantities = IngredientsRecipesQuantity.find(:all)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +13,7 @@ class IngredientsRecipesQuantitiesController < ApplicationController
   # GET /ingredients_recipes_quantities/1
   # GET /ingredients_recipes_quantities/1.xml
   def show
-    @ingredients_recipes_quantities = IngredientsRecipesQuantities.find(params[:id])
+    @ingredients_recipes_quantities = IngredientsRecipesQuantity.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +24,7 @@ class IngredientsRecipesQuantitiesController < ApplicationController
   # GET /ingredients_recipes_quantities/new
   # GET /ingredients_recipes_quantities/new.xml
   def new
-    @ingredients_recipes_quantities = IngredientsRecipesQuantities.new
+    @ingredients_recipes_quantities = IngredientsRecipesQuantity.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,13 +34,13 @@ class IngredientsRecipesQuantitiesController < ApplicationController
 
   # GET /ingredients_recipes_quantities/1/edit
   def edit
-    @ingredients_recipes_quantities = IngredientsRecipesQuantities.find(params[:id])
+    @ingredients_recipes_quantities = IngredientsRecipesQuantity.find(params[:id])
   end
 
   # POST /ingredients_recipes_quantities
   # POST /ingredients_recipes_quantities.xml
   def create
-    @ingredients_recipes_quantities = IngredientsRecipesQuantities.new(params[:ingredients_recipes_quantities])
+    @ingredients_recipes_quantities = IngredientsRecipesQuantity.new(params[:ingredients_recipes_quantities])
 
     respond_to do |format|
       if @ingredients_recipes_quantities.save
@@ -57,7 +57,7 @@ class IngredientsRecipesQuantitiesController < ApplicationController
   # PUT /ingredients_recipes_quantities/1
   # PUT /ingredients_recipes_quantities/1.xml
   def update
-    @ingredients_recipes_quantities = IngredientsRecipesQuantities.find(params[:id])
+    @ingredients_recipes_quantities = IngredientsRecipesQuantity.find(params[:id])
 
     respond_to do |format|
       if @ingredients_recipes_quantities.update_attributes(params[:ingredients_recipes_quantities])
@@ -74,7 +74,7 @@ class IngredientsRecipesQuantitiesController < ApplicationController
   # DELETE /ingredients_recipes_quantities/1
   # DELETE /ingredients_recipes_quantities/1.xml
   def destroy
-    @ingredients_recipes_quantities = IngredientsRecipesQuantities.find(params[:id])
+    @ingredients_recipes_quantities = IngredientsRecipesQuantity.find(params[:id])
     @ingredients_recipes_quantities.destroy
 
     respond_to do |format|

@@ -1,40 +1,127 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
-  <head>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <title>DrinkRobot.com</title>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.0/jquery.min.js"></script> 
-    <script type="text/javascript" src="/javascripts/jquery.tokeninput.js"></script> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	
+	<link rel="stylesheet" href="/stylesheets/style4.css" type="text/css">
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script type="text/javascript" src="/javascripts/jquery.tokeninput.js"></script> 
     <link rel="stylesheet" href="/stylesheets/token-input.css" type="text/css" /> 
-    <style type="text/css" media="screen">
-      body {
-        margin: 0;
-        margin-bottom: 25px;
-        padding: 0;
-        background-color: #f0f0f0;
-        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
-        font-size: 13px;
-        color: #333;
-      }
-      
-      h1 {
-        font-size: 28px;
-        color: #000;
-      }
-      
-      h2 {
-      	font-size: 18px;
-      	color: #000;
-      }
-      
-    </style>
-  </head>
-  <body>
-    <center>
-  	<img src="images/buzz.png">
-    <h1>DrinkRobot.com</h1>
-    <h2>Coming Soon</h2> 
-    </center>
-  </body>
-</html>
+	<script type="text/javascript">
+		$(function() {
+			$('#footer li img') .hover(function() {
+				var tip = $(this) .attr('alt');
+				$('#footer .tip') .empty() .append(tip) .show();
+			},
+			function() {
+				$('#footer .tip') .hide();
+			});
+		});
+	</script>
+	<script type="text/javascript"> 
+    $(document).ready(function() {
+        $("#tokenize").tokenInput("/ingredients/search/", {
+            hintText: "Type in the names of the drinks you have",
+            noResultsText: "No results",
+            searchingText: "Searching..."
+        });
+    });
+    </script> 
+	
+	<title>DrinkRobot.com</title>
+
+
+	<!--[if IE]>
+	<link rel="stylesheet" href="/stylesheets/ie.css" type="text/css" media="screen" />
+	<![endif]-->
+
+	<!--[if lt IE 7.]>
+	<link rel="stylesheet" href="/stylesheets/ie6.css" type="text/css" media="screen" />
+	<script src="/javascripts/DD_belatedPNG_0.0.8a-min.js"></script>
+	<script>
+	  DD_belatedPNG.fix('img, #actions a, span.close, div.jScrollPaneDrag');
+	</script>
+	<![endif]-->
+</head> 
+ 
+<body> 
+	<!-- BEGIN HEADER --> 
+	<div id="header"> 
+		
+		<div id="logo-container"> 
+			<div class="logo"> 
+				<a href="">DrinkRobot</a> 
+			</div> 
+			<div class="slogan"> 
+				<p>Your Slogan<br />Goes Here</p> 
+			</div> 
+		</div><!-- end logo-container --> 
+		
+		<div id="page-title"> 
+			<h1>Let's Get Drunk</h1> 
+			<p> 
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non sapien id <a href="">risus ultricies</a> dignissim quis at tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non sapien id <a href="">risus ultricies</a> dignissim quis at tellus.
+			</p> 
+		</div> 
+		
+	</div> 
+	<!-- END HEADER --> 
+	
+	<div id="wrapper" class="clear"> 
+	
+		<div id="col-left"><!-- Begin Left Column --> 
+			<br/>
+			<img src="images/buzz.png" width="300px">
+		</div><!-- End Left Column --> 
+		
+		<!-- BEGIN RIGHT COLUMN - page content--> 
+		<div id="page-content"> 
+			
+			<!-- BEGIN SLIDER --> 
+			<div id="slide-container"> 
+				
+				<!-- Begin Slider Item --> 
+				<div class="slider-item"> 
+					<div class="featured-parag"> 
+						<div> 
+							<h4><a href="/recipes/new">New Drink Recipe</a></h4>
+							<h4>Search by Ingredients</h4> 
+							<form action="" method="get" name="ingredients">
+								<input type="text" id="tokenize" name="ingredients" /> <br/>
+								<input type="submit" name="submit" class="large button green" value="Find My Drinks"></a>
+							</form>
+							
+						</div>
+					</div> 
+				</div> 
+				<!-- End Slider Item --> 
+				
+				
+			</div><!-- END SLIDER --> 
+			
+			<!-- Begin Controllers --> 
+			<span id="nextarr" class="control"></span> 
+			<div id="meta-pagination">	
+				<span class="curr-item-num"></span> 
+				<span class="num-div">|</span> 
+				<span class="all-item-num"></span> 
+			</div> 
+			<span id="prevarr" class="control"></span> 
+			<!-- End Controllers --> 
+			
+		</div><!-- END RIGHT COLUMN - page content--> 
+		
+	</div><!-- end wrapper --> 
+ 
+	<div id="footer" class="clear"> 
+		<p class="left">Copyright &#169; DrinkRobot. All rights reserved.</p> 
+		<ul class="right"> 
+			<li><a href=""><img src="/images/ico-facebook.png" alt="Facebook" /></a></li> 
+			<li><a href=""><img src="/images/ico-twitter.png" alt="Twitter" /></a></li> 
+			<li><a href=""><img src="/images/ico-rss.png" alt="RSS" /></a></li> 
+		</ul> 
+		<p class="tip right"></p> 
+	</div> 
+</body> 
+</html> 

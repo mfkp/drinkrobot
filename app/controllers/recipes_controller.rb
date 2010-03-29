@@ -21,6 +21,24 @@ class RecipesController < ApplicationController
       format.json { render :json => @results }
     end
   end
+  
+  # GET /recipes/search/string
+  # GET /recipes/search/string.xml
+  def search_by_ingredients
+  	@ingredients = params[:ingredients]
+  	@recipes = Recipe.find(:all)
+  	@recipes.each do |@recipe|
+  		
+  	end
+  	@results = Recipe.find(:all, :conditions => [ "ingredients_recpies_quantaties LIKE ?", @searchphrase])
+	@results = Ingredient.search(params[:name])
+
+    respond_to do |format|
+      format.html # search.html.erb
+      format.xml  { render :xml => @recipes }
+      format.json { render :json => @results }
+    end
+  end
 
   # GET /recipes/1
   # GET /recipes/1.xml
@@ -56,6 +74,13 @@ class RecipesController < ApplicationController
   # POST /recipes.xml
   def create
     @recipe = Recipe.new(params[:recipe])
+    @ingredients = params[:ingredients].split(",")
+    @ingredientslist = []
+    @ingredients.each do |@ingredient|
+    	IngredientsRecipesQuantity.new(@recipe.id)
+    	@ingredientslist.push(Ingredient.find(@ingredient))
+    end
+    @recipe.ingredients = @ingredientslist
 
     respond_to do |format|
       if @recipe.save
