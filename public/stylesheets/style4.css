@@ -16,8 +16,25 @@ a img { border: none; }
 .right { float: right; }
 .left { float: left; }
 /* ----------------- */
- 
-html { background: #2f3337 }
+
+/*sticky footer code*/
+* {
+	margin: 0;
+}
+html, body {
+	height: 100%;
+}
+#wrap {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -4em;
+}
+/*end sticky footer code*/
+
+html {
+	background: #363b40;
+}
 body {
 	position: relative;
 	height: 100%;
@@ -108,7 +125,7 @@ blockquote {
 }
 #logo-container a:hover, #folio-logo-container a:hover { border: none }
 #page-title {
-	background: url(/images/drinkrobot.png) no-repeat 50% 100%;
+	background: #2f3337 url(/images/drinkrobot.png) no-repeat 50% 100%;
 	float: left;
 	margin: 0px auto;
 	width: 100%;
@@ -124,7 +141,6 @@ blockquote {
 	overflow: auto;
 	background: #363b40;
 	border-top: 1px solid #52575d;
-	border-bottom: 1px solid #52575d;
 }
 #folio-wrapper {
 	margin: 0 auto;
@@ -204,10 +220,9 @@ blockquote {
 }
 #page-content {
 	position: relative;
-	margin-left: 9.7%;
+	margin: 0px auto;
 	padding-top: 15px;
 	width: 580px;
-	float: left;
 }
 #page-content ul {
 	list-style-type: disc;
@@ -569,11 +584,16 @@ a.lightbox img:hover  {
  
 /* Footer */
 #footer {
-	margin: 0px auto auto 5%;
-	padding-top: 20px;
-	padding-bottom: 50px;
-	width: 90%;
+	margin: 0px auto;
+	padding-top: 29px;
+	padding-bottom: 18px;
+	width: 100%;
 	font: normal 11px Arial;
+	background: #2f3337;
+	border-top: 1px solid #52575D;
+}
+#footer div {
+	display: inline;
 }
 #footer p.tip {
 	display: none;

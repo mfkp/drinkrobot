@@ -43,9 +43,16 @@
 	  DD_belatedPNG.fix('img, #actions a, span.close, div.jScrollPaneDrag');
 	</script>
 	<![endif]-->
+	
+	<!--[if  IE 8]>
+		<style type="text/css">
+			#wrap {display:table;}
+		</style>
+	<![endif]-->
 </head> 
  
 <body> 
+<div id="wrap">
 	<!-- BEGIN HEADER --> 
 	<div id="header">  
 		
@@ -56,11 +63,7 @@
 	<!-- END HEADER --> 
 	
 	<div id="wrapper" class="clear"> 
-	
-		<div id="col-left"><!-- Begin Left Column --> 
-			<br/>
-			<img src="images/buzz.png" width="300px">
-		</div><!-- End Left Column --> 
+
 		
 		<!-- BEGIN RIGHT COLUMN - page content--> 
 		<div id="page-content"> 
@@ -90,15 +93,16 @@
 		</div><!-- END RIGHT COLUMN - page content--> 
 		
 	</div><!-- end wrapper --> 
- 
-	<div id="footer" class="clear"> 
-		<p class="left">Copyright &#169; DrinkRobot. All rights reserved.</p> 
-		<ul class="right"> 
-			<li><a href=""><img src="/images/ico-facebook.png" alt="Facebook" /></a></li> 
-			<li><a href=""><img src="/images/ico-twitter.png" alt="Twitter" /></a></li> 
-			<li><a href=""><img src="/images/ico-rss.png" alt="RSS" /></a></li> 
-		</ul> 
-		<p class="tip right"></p> 
-	</div> 
+</div><!-- end wrap --> 
+
+<div id="footer" class="clear"> 
+	<p class="left">Copyright &#169; DrinkRobot. All rights reserved.</p> 
+	<ul class="right"> 
+		<li><a href=""><img src="/images/ico-facebook.png" alt="Facebook" /></a></li> 
+		<li><a href=""><img src="/images/ico-twitter.png" alt="Twitter" /></a></li> 
+		<li><a href=""><img src="/images/ico-rss.png" alt="RSS" /></a></li> 
+	</ul> 
+	<p class="tip right"></p> 
+</div> 
 </body> 
 </html> 
