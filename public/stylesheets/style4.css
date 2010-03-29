@@ -109,8 +109,7 @@ blockquote {
 #logo-container a:hover, #folio-logo-container a:hover { border: none }
 #page-title {
 	float: left;
-	margin-top: 30px;
-	margin-left: 9.7%;
+	margin-left: 77px;
 	width: 45.3%; /*580px;*/
 }
 #page-title p { width: 580px }
