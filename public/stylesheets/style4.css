@@ -28,7 +28,6 @@ html, body {
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
-	margin: 0 auto -4em;
 }
 /*end sticky footer code*/
 
@@ -127,7 +126,7 @@ blockquote {
 #page-title {
 	background: #2f3337 url(/images/drinkrobot.png) no-repeat 50% 100%;
 	float: left;
-	margin: 0px auto;
+	margin: 0px auto 20px;
 	width: 100%;
 	height: 179px;
 }
@@ -583,10 +582,17 @@ a.lightbox img:hover  {
 }
  
 /* Footer */
-#footer {
-	margin: 0px auto;
+#footer_backup {
 	padding-top: 29px;
 	padding-bottom: 18px;
+	width: 100%;
+	font: normal 11px Arial;
+	background: #2f3337;
+	border-top: 1px solid #52575D;
+}
+#footer {
+	margin-top: -20px;
+	height: 19px;
 	width: 100%;
 	font: normal 11px Arial;
 	background: #2f3337;
