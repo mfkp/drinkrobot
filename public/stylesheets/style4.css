@@ -281,7 +281,6 @@ blockquote {
 #slide-container {
 	position: relative;
 	width: 580px;
-	overflow: auto;
 }
 .featured-img-wrap {
 	margin-bottom: 20px;
