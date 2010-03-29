@@ -125,6 +125,7 @@ blockquote {
 #logo-container a:hover, #folio-logo-container a:hover { border: none }
 #page-title {
 	background: #2f3337 url(/images/drinkrobot.png) no-repeat 50% 100%;
+	border-bottom: 1px solid #52575d;
 	float: left;
 	margin: 0px auto 20px;
 	width: 100%;
@@ -139,7 +140,6 @@ blockquote {
 	width: 100%;
 	overflow: auto;
 	background: #363b40;
-	border-top: 1px solid #52575d;
 }
 #folio-wrapper {
 	margin: 0 auto;
