@@ -9,8 +9,8 @@
   <ul>
   <% count = 0 %>
   <% @ingredients.each do |ingredient| %>
-  <li><%= @quantities[count].quantity %> <%= ingredient.name %></li>
-  <% count = count + 1 %>
+  	<li><% if !@quantities[count].nil? %><%= @quantities[count].quantity %><% end %> <%= ingredient.name %></li>
+  	<% count = count + 1 %>
   <% end %>
    </ul>
 </p>
