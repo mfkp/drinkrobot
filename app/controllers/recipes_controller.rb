@@ -2,11 +2,12 @@ class RecipesController < ApplicationController
   # GET /recipes
   # GET /recipes.xml
   def index
-    @recipes = Recipe.find(:all)
+    @recipes = Recipe.paginate(:per_page => 15, :page => params[:page])
 
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @recipes }
+      format.js
     end
   end
   
