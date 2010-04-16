@@ -1,9 +1,8 @@
-
 html,body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	background: #000000 url(/images/img01.jpg) repeat left top;
+	background: #000000 url(//images/img01.jpg) repeat left top;
 	font-size: 14px;
 	font-family:Arial, Helvetica, sans-serif;
 	text-align: justify;
@@ -108,7 +107,7 @@ input {
 	margin: 0;
 	padding: 0;
 	height: 200px;
-	background: url(/images/img02.jpg) repeat-x left top;
+	background: url(//images/img02.jpg) repeat-x left top;
 }
 
 /* Header */
@@ -126,7 +125,7 @@ input {
 	width: 810px;
 	height: 200px;
 	margin: 0 auto;
-	background: url(/images/pmd.png) no-repeat center bottom;
+	background: url(//images/pmd.png) no-repeat center bottom;
 }
 
 #logo h2 {

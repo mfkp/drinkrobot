@@ -50,9 +50,23 @@
 	<!-- BEGIN HEADER --> 
 	<div id="header"> 
 		
-		<div id="page-title"> 
+		<div id="user_nav">  
+			<div class="div-width">
+				<span class="right">
+				  <% if user_signed_in? %>  
+					<%= current_user.email %> | 
+					<%= link_to "Sign out", destroy_user_session_path %>  
+				  <% else %>  
+					<%= link_to "Register", new_user_registration_path %> or  
+					<%= link_to "Login", new_user_session_path %>  
+				  <% end %>  
+				</span>
+			</div>
 		</div> 
 		
+		<div id="page-title"> 
+		</div> 
+		 
 	</div> 
 	<!-- END HEADER --> 
 		
@@ -66,7 +80,9 @@
 				<div class="slider-item"> 
 					<div class="featured-parag"> 
 						<div> 
-							<p style="color: green"><%= flash[:notice] %></p>
+							<span id="notice">
+								<%= flash[:notice] %>
+							</span>
 
 							<%= yield  %>
 						</div>
@@ -81,7 +97,7 @@
 </div><!-- end wrap --> 
 	<div id="footer" class="clear"> 
 	<div class="div-width">
-	<p class="left">Copyright &#169; DrinkRobot. All rights reserved.</p> 
+	<p class="left">Copyright &#169; <% time = Time.new %><%= time.year %> DrinkRobot</p> 
 	<ul class="right"> 
 		<li><a href=""><img src="/images/ico-facebook.png" alt="Facebook" /></a></li> 
 		<li><a href=""><img src="/images/ico-twitter.png" alt="Twitter" /></a></li> 

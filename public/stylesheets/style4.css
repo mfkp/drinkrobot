@@ -660,3 +660,13 @@ a.lightbox img:hover  {
 	.blue.button:hover							{ background-color: #2575cf; }
 	.yellow.button, .yellow.button:visited		{ background-color: #ffb515; }
 	.yellow.button:hover						{ background-color: #fc9200; }
+	
+#notice {
+	color: white;
+	background: url('/images/asterisk_yellow.png') no-repeat;
+	padding: 2.5px 5px 2.5px 20px;
+}
+#user_nav {
+	background: #2F3337;
+	height: 20px;
+}

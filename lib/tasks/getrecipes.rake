@@ -45,17 +45,10 @@ namespace :db do
 			num += 150
 		end
 	end
-
-
-#	desc "Raise an error unless the RAILS_ENV is development"
-#	task :development_environment_only do
-#		raise "Hey, development only you monkey!" unless RAILS_ENV == 'development'
-#	end
 	
 	desc "Drop, create, migrate the development database"
 	task :clear => [
-		'environment', 
-#		'db:development_environment_only', 
+		'environment',  
 		'db:drop', 
 		'db:create', 
 		'db:migrate'
