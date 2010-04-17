@@ -17,7 +17,7 @@ class IngredientsController < ApplicationController
 
     respond_to do |format|
       ActiveRecord::Base.include_root_in_json = false
-      format.html { render :json => @results.to_json(:only => [:id, :name]) }
+      format.html { render :json => @results.as_json(:only => [:id, :name]) }
       format.xml  { render :xml => @ingredients }
     end
   end
