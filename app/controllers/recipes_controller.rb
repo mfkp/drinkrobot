@@ -28,9 +28,9 @@ class RecipesController < ApplicationController
   def search_by_ingredients
   	@ingredients = params[:ingredients]
   	@recipes = Recipe.find(:all)
-  	@recipes.each do |@recipe|
+  	#@recipes.each do |@recipe|
   		
-  	end
+  	#end
   	@results = Recipe.find(:all, :conditions => [ "ingredients_recpies_quantaties LIKE ?", @searchphrase])
 	@results = Ingredient.search(params[:name])
 
