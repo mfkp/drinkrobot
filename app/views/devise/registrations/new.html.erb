@@ -1,6 +1,6 @@
 <h2>Sign up</h2>
 
-<%= form_for(resource_name, resource, :url => registration_path(resource_name)) do |f| %>
+<%= form_for(resource_name, resource, :url => registration_path(resource_name), :html => { :class => "styledform" }) do |f| %>
   <% if f.error_messages %><p><span id="notice"><%= f.error_messages %></span></p><% end %>
   <%= f.label :email %>
   <p><%= f.text_field :email %></p>
@@ -11,7 +11,7 @@
   <%= f.label :password_confirmation %>
   <p><%= f.password_field :password_confirmation %></p>
 
-  <p><%= f.submit "Sign up", :class => 'large button green' %></p>
+  <p><%= f.submit "Sign up", :class => 'super button green' %></p>
 <% end %>
 
 <%= render :partial => "devise/shared/links" %>

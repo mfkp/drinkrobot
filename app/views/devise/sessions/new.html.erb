@@ -1,6 +1,6 @@
 <h2>Login</h2>
 
-<%= form_for(resource_name, resource, :url => session_path(resource_name)) do |f| %>
+<%= form_for(resource_name, resource, :url => session_path(resource_name), :html => { :class => "styledform" }) do |f| %>
   <p><%= f.label :email %></p>
   <p><%= f.text_field :email %></p>
 
@@ -9,9 +9,9 @@
 
   <% if devise_mapping.rememberable? -%>
     <p><%= f.check_box :remember_me %> <%= f.label :remember_me %></p>
-  <% end -%>
-
-  <p><%= f.submit "Login", :class => 'large button green' %></p>
+  <% end %>
+  <br/>
+  <p><%= f.submit "Login", :class => 'super button green' %></p>
 <% end %>
 
 <%= render :partial => "devise/shared/links" %>

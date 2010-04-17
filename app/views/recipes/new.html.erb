@@ -1,6 +1,6 @@
-<h1>New Drink Recipe</h1>
+<h2>New Drink Recipe</h2>
 
-<% form_for(@recipe) do |f| %>
+<% form_for(@recipe, :html => { :class => "styledform" }) do |f| %>
   <%= f.error_messages %>
   <p>
     <%= f.label :name %><br />
@@ -15,7 +15,7 @@
     <%= f.text_area :instructions %>
   </p>
   <p>
-    <%= f.submit "Create", :class => 'large button green' %>
-    <%= link_to 'Cancel', '/', :class => 'large button red' %>
+    <%= f.submit "Create", :class => 'super button green' %>
+    <%= link_to 'Cancel', '/', :class => 'super button red' %>
   </p>
 <% end %>

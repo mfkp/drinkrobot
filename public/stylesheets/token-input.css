@@ -23,6 +23,7 @@ ul.token-input-list li input {
     width: 500px;
     padding: 3px 8px;
     background-color: white;
+    font-size:24px;
 }
 
 li.token-input-token {
@@ -48,6 +49,7 @@ li.token-input-token span {
     float: right;
     color: #777;
     cursor: pointer;
+    line-height: 36px;
 }
 
 li.token-input-selected-token {

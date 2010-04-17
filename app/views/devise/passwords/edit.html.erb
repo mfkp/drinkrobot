@@ -1,6 +1,6 @@
 <h2>Change your password</h2>
 
-<%= form_for(resource_name, resource, :url => password_path(resource_name), :html => { :method => :put }) do |f| %>
+<%= form_for(resource_name, resource, :url => password_path(resource_name), :html => { :class => "styledform", :method => :put }) do |f| %>
   <%= f.error_messages %>
   <%= f.hidden_field :reset_password_token %>
 
@@ -10,7 +10,7 @@
   <p><%= f.label :password_confirmation %></p>
   <p><%= f.password_field :password_confirmation %></p>
 
-  <p><%= f.submit "Change my Password", :class => 'large button green' %></p>
+  <p><%= f.submit "Change my Password", :class => 'super button green' %></p>
 <% end %>
 
 <%= render :partial => "devise/shared/links" %>

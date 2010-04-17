@@ -1,9 +1,6 @@
-<h1>Drink Recipes</h1>
+<h2 style="display:inline;">Drink Recipes</h2>
+<%= link_to 'New Drink Recipe', new_recipe_path, :class => 'super button blue', :style => "float:right;" %>
 
 <div id="recipes">
   <%= render :partial => 'recipes' %>
 </div>
-
-<br />
-
-<%= link_to 'New Drink Recipe', new_recipe_path, :class => 'large button blue' %>

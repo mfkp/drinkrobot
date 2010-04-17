@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<%= javascript_include_tag 'jquery.tokeninput' %>
+	<%= javascript_include_tag 'pagination' %>
+    <%= stylesheet_link_tag 'token-input' %>
+    <%= stylesheet_link_tag 'style4' %>
+	<script type="text/javascript">
+		$(function() {
+			$('#footer li img') .hover(function() {
+				var tip = $(this) .attr('alt');
+				$('#footer .tip') .empty() .append(tip) .show();
+			},
+			function() {
+				$('#footer .tip') .hide();
+			});
+		});
+	</script>
+	<script type="text/javascript"> 
+    $(document).ready(function() {
+        $("#tokenize").tokenInput("/ingredients/search/", {
+            hintText: "Type in the names of the drinks you have",
+            noResultsText: "No results",
+            searchingText: "Searching..."
+        });
+    });
+    </script> 
+	
+	<title>DrinkRobot.com</title>
+
+
+	<!--[if IE]>
+	<link rel="stylesheet" href="/stylesheets/ie.css" type="text/css" media="screen" />
+	<![endif]-->
+
+	<!--[if lt IE 7.]>
+	<link rel="stylesheet" href="/stylesheets/ie6.css" type="text/css" media="screen" />
+	<script src="/javascripts/DD_belatedPNG_0.0.8a-min.js"></script>
+	<script>
+	  DD_belatedPNG.fix('img, #actions a, span.close, div.jScrollPaneDrag');
+	</script>
+	<![endif]-->
+</head> 
+
+<body> 
+<div id="wrap">
+	<!-- BEGIN HEADER --> 
+	<div id="header"> 
+		
+		<div id="user_nav">  
+			<div class="div-width">
+				<span class="right">
+				  <% if user_signed_in? %>  
+					<%= current_user.email %> | 
+					<%= link_to "Sign out", destroy_user_session_path %>  
+				  <% else %>  
+					<%= link_to "Register", new_user_registration_path %> or  
+					<%= link_to "Login", new_user_session_path %>  
+				  <% end %>  
+				</span>
+			</div>
+		</div> 
+		
+		<div id="page-title"> 
+		</div> 
+		 
+	</div> 
+	<!-- END HEADER --> 
+		
+		<!-- BEGIN RIGHT COLUMN - page content--> 
+		<div id="page-content"> 
+			
+			<!-- BEGIN SLIDER --> 
+			<div id="slide-container"> 
+				
+				<!-- Begin Slider Item --> 
+				<div class="slider-item"> 
+					<div class="featured-parag"> 
+						<div> 
+							<span id="notice">
+								<%= flash[:notice] %>
+							</span>
+
+							<%= yield  %>
+						</div>
+					</div> 
+				</div> 
+				<!-- End Slider Item --> 
+				
+			</div><!-- END SLIDER --> 
+			
+		</div><!-- END RIGHT COLUMN - page content--> 
+
+</div><!-- end wrap --> 
+	<div id="footer" class="clear"> 
+	<div class="div-width">
+	<p class="left">Copyright &#169; <% time = Time.new %><%= time.year %> DrinkRobot</p> 
+	<ul class="right"> 
+		<li><a href=""><img src="/images/ico-facebook.png" alt="Facebook" /></a></li> 
+		<li><a href=""><img src="/images/ico-twitter.png" alt="Twitter" /></a></li> 
+		<li><a href=""><img src="/images/ico-rss.png" alt="RSS" /></a></li> 
+	</ul> 
+	<p class="tip right"></p> 
+	</div>
+</div> 
+</body> 
+</html> 
