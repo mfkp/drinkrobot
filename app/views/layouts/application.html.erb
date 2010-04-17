@@ -68,9 +68,11 @@
     </header>
 
     <div id="contentcontainer">
+    	<% if flash[:notice] %>
     	<span id="notice">
 			<%= flash[:notice] %>
 		</span>
+		<% end %>
 
 		<%= yield  %>
     </div>
