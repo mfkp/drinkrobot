@@ -14,11 +14,17 @@ class RecipesController < ApplicationController
   # GET /recipes/search/string
   # GET /recipes/search/string.xml
   def search
-	@results = Ingredient.search(params[:name])
+  	if request.post?
+  		post = params[:recipe]
+  		name = post[:name]
+		@results = Recipe.search(name).paginate(:per_page => 10, :page => params[:page])
+	else
+		@results = Recipe.search(:name).paginate(:per_page => 10, :page => params[:page])
+	end
 
     respond_to do |format|
       format.html # search.html.erb
-      format.xml  { render :xml => @recipes }
+      format.xml  { render :xml => @results }
       format.json { render :json => @results }
     end
   end

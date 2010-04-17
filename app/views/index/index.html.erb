@@ -28,11 +28,12 @@
 
 	<h2 class="about">Search by Drink Name</h2>
 	
-	<div> 
-        <form action="" method="get" name="ingredients"> 
-            <input type="text" id="tokenize" name="ingredients" /> <br/> 
-            <input type="submit" name="submit" class="large button green" value="Search" /> 
-        </form> 
+	<div>
+		  <% form_for :recipe, :url => { :controller => "recipes", :action => "search" }, :html => { :class => "styledform" } do |f| %>
+			<%= f.error_messages %>
+			<%= f.text_field :name %><br />
+			<%= f.submit "Search", :class => 'super button green' %>
+		  <% end %>
     </div>
 
 </section>
