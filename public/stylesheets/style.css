@@ -145,6 +145,7 @@ footer ul li a {
 	 
 }
 footer ul li a:hover { 
+	color: white;
 	position: relative; 
 	top: -1px;
 	-webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); 
