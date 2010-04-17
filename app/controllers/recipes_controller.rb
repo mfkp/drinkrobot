@@ -77,7 +77,8 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new(params[:recipe])
     @ingredients = params[:ingredients].split(",")
     @ingredientslist = []
-    @ingredients.each do |@ingredient|
+    @ingredients.each do |arg|
+    	@ingredient = arg
     	IngredientsRecipesQuantity.new(@recipe.id)
     	@ingredientslist.push(Ingredient.find(@ingredient))
     end
