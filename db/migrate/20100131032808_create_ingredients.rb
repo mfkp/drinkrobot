@@ -1,6 +1,6 @@
 class CreateIngredients < ActiveRecord::Migration
   def self.up
-    create_table (:ingredients, :primary_key => 'id') do |t|
+    create_table (:ingredients) do |t|
       t.integer :id
       t.string :name
 
