@@ -1,5 +1,5 @@
 <div>
-<h2 style="display:inline;">
+<h2 style="display:inline;font-size:24px;">
   <%=h @recipe.name %>
 </h2>
 <span style="float:right;"><a href="#"><img src="/images/heart_add.png" /> Add to Favorites</a></span>
@@ -20,5 +20,5 @@
   <%=h @recipe.instructions %>
 </p>
 <br/>
+<%= link_to '←Back', :back, :class => 'super button' %>
 <%= link_to 'Edit', edit_recipe_path(@recipe), :class => 'super button red' %> 
-<%= link_to 'Back', :back, :class => 'super button' %>

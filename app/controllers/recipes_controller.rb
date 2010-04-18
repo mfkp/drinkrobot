@@ -19,7 +19,8 @@ class RecipesController < ApplicationController
   		name = post[:name]
 		@results = Recipe.search(name).paginate(:per_page => 10, :page => params[:page])
 	else
-		@results = Recipe.search(:name).paginate(:per_page => 10, :page => params[:page])
+		redirect_to :controller => 'index', :action => 'index'
+		return
 	end
 
     respond_to do |format|
