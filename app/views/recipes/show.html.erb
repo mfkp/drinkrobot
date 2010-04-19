@@ -1,19 +1,21 @@
 <div>
-<h2 style="display:inline;font-size:24px;">
-  <%=h @recipe.name %>
-</h2>
-<span style="float:right;"><a href="#"><img src="/images/heart_add.png" /> Add to Favorites</a></span>
+	<h2 style="display:inline;font-size:32px;">
+	  <%=h @recipe.name %>
+	</h2>
+	<div style="float:right;">
+		<a href="#" style="font-size:24px; border: 0px black;"><img src="/images/heart_add.png" /> Add to Favorites</a><br/>
+		<a class="a2a_dd" style="border:0px black;" href="http://www.addtoany.com/share_save"><img src="http://static.addtoany.com/buttons/share_save_171_16.png" width="171" height="16" border="0" alt="Share/Bookmark"/></a><script type="text/javascript">a2a_num_services=10;a2a_color_main="dbf6cb";a2a_color_border="AECADB";a2a_color_link_text="333333";a2a_color_link_text_hover="333333";a2a_prioritize=["facebook","twitter","google_reader","google_buzz","delicious","stumbleupon","digg","reddit","myspace","printfriendly"];</script><script type="text/javascript" src="http://static.addtoany.com/menu/page.js"></script>
+	</div>
 </div>
 
-<p>
-  <ul>
-  <% count = 0 %>
-  <% @ingredients.each do |ingredient| %>
-  	<li><% if !@quantities[count].nil? %><%= @quantities[count].quantity %><% end %> <%= ingredient.name %></li>
-  	<% count = count + 1 %>
-  <% end %>
-   </ul>
-</p>
+
+<ul>
+<% count = 0 %>
+<% @ingredients.each do |ingredient| %>
+	<li><p><% if !@quantities[count].nil? %><%= @quantities[count].quantity %><% end %> <%= ingredient.name %></p></li>
+<% count = count + 1 %>
+<% end %>
+</ul>
 
 <p>
   <strong>Mixing Instructions:</strong>
