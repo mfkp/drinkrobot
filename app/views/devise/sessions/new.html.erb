@@ -1,3 +1,4 @@
+<div style="float:left;">
 <h2>Login</h2>
 
 <%= form_for(resource_name, resource, :url => session_path(resource_name), :html => { :class => "styledform" }) do |f| %>
@@ -15,3 +16,10 @@
 <% end %>
 
 <%= render :partial => "devise/shared/links" %>
+
+</div>
+
+<div style="float:left; text-align: center; width: 50%;">
+<h2>Don't have an account?</h2>
+<p><%= link_to "Sign up for free!", new_registration_path(resource_name), :class => 'super button blue' %></p>
+</div>

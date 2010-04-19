@@ -2,9 +2,9 @@
 <br/>
 <% for recipe in @recipes %>
   <div class="recipes">
-    <h4 style="display:inline;">
+    <h3 style="display:inline;">
       <%= link_to h(recipe.name), recipe %>
-    </h4>
+    </h3>
     <div class="actions" style="display:inline;float:right;">
       <%= link_to "Edit", edit_recipe_path(recipe) %> |
       <%= link_to "Delete", recipe, :confirm => 'Are you sure?', :method => :delete %>

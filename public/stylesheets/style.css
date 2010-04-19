@@ -15,13 +15,8 @@ body { font-family: Keffeesatz, Arial; color: #4b4b4b; background: url(/images/p
 ::selection { background-color: rgba(122, 192, 0, 0.2); }
 ::-moz-selection { background-color: rgba(122, 192, 0, 0.2); border: 10px solid red; }
 
-h2 { font-size: 48px; color: #7ac000; }
+h2 { font-size: 48px; color: #7ac000; padding-bottom: 10px; }
 h2 span.sub { font-size: 36px; float: left; color: #4b4b4b; }
-
-h2.intro { height: 105px; padding-left: 125px; background: url(/images/intro.png) no-repeat -10px -10px; }
-h2.work { height: 105px; padding-left: 125px; background: url(/images/portfolio.png) no-repeat -10px -10px; }
-h2.about { height: 105px; padding-left: 125px; background: url(/images/about.png) no-repeat -10px -10px; }
-h2.contact { height: 105px; padding-left: 125px; background: url(/images/contact.png) no-repeat -10px -10px; }
 
 a { color: #7ac000; text-decoration: none; border-bottom: 1px solid #7ac000; padding-bottom: 2px; }
 a:hover { color: #000; text-decoration: none; border-bottom: 1px solid #000; padding-bottom: 2px; }
