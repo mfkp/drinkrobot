@@ -44,6 +44,19 @@
 </head>
 
 <body>
+	<script type="text/javascript">
+	  if (typeof Meebo == 'undefined') {
+		Meebo=function(){(Meebo._=Meebo._||[]).push(arguments)};
+		(function(q){
+		  var d=document,b=d.body;
+		  if(!b){var cb=arguments.callee;return setTimeout(function(){cb(q)},100);}
+		  var m=b.insertBefore(d.createElement('div'), b.firstChild), s=d.createElement('script');
+		  m.id='meebo'; m.style.display='none'; m.innerHTML='<iframe id="meebo-iframe" frameBorder="0"></iframe>';
+		  s.src='http'+(q.https?'s':'')+'://'+(q.stage?'stage-':'')+'cim.meebo.com/cim/cim.php?network='+q.network;
+		  d.getElementsByTagName('head')[0].appendChild(s);
+		 })({network: 'drinkrobot_do09qo', stage: false});
+	  }
+	</script>
 
     <header>
     
@@ -77,6 +90,8 @@
 
 		<%= yield  %>
     </div>
-    
+	<script type="text/javascript">
+		Meebo('domReady');
+	</script>
 </body>
 </html>
