@@ -56,11 +56,11 @@
     				<li><a href="/">Search</a></li>
     				<li><a href="/recipes">Browse</a></li>
     				<li><a href="/index/about">About</a></li>
-    				<% if user_signed_in? %>  
-						<li><%= link_to "Sign out", destroy_user_session_path %></li>
-					  <% else %>  
-						<li><%= link_to "Register/Login", new_user_session_path %></li>
-					  <% end %>
+<% if user_signed_in? %>  
+					<li><%= link_to "Sign out", destroy_user_session_path %></li>
+<% else %>  
+					<li><%= link_to "Register/Login", new_user_session_path %></li>
+<% end %>
     			</ul>				
     		</nav>
     	
