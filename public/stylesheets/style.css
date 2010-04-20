@@ -203,3 +203,7 @@ footer ul li img {
 	background: url('/images/asterisk_yellow.png') no-repeat;
 	padding: 2.5px 5px 2.5px 20px;
 }
+
+#socialLinks a {
+	border: 0px black;
+}
