@@ -37,7 +37,7 @@
   <%=h @recipe.instructions %>
 </p>
 <div style="display:inline;float:left;font-size:24px;padding-top:20px;">
-	Share This Drink: <script type="text/javascript" src="/javascripts/social.js"></script><br/>
+	Share This Drink: <%= javascript_include_tag 'social' %><br/>
 </div>
 <div style="clear:both;"></div>
 <%= link_to '←Back', :back, :class => 'super button' %>
