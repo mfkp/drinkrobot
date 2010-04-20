@@ -1,4 +1,6 @@
 class RecipesController < ApplicationController
+  before_filter :authenticate_user!, :except => [:index, :search, :search_by_ingredients, :show]
+  
   # GET /recipes
   # GET /recipes.xml
   def index

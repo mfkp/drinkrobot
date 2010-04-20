@@ -44,19 +44,6 @@
 </head>
 
 <body>
-	<!--<script type="text/javascript">
-	  if (typeof Meebo == 'undefined') {
-		Meebo=function(){(Meebo._=Meebo._||[]).push(arguments)};
-		(function(q){
-		  var d=document,b=d.body;
-		  if(!b){var cb=arguments.callee;return setTimeout(function(){cb(q)},100);}
-		  var m=b.insertBefore(d.createElement('div'), b.firstChild), s=d.createElement('script');
-		  m.id='meebo'; m.style.display='none'; m.innerHTML='<iframe id="meebo-iframe" frameBorder="0"></iframe>';
-		  s.src='http'+(q.https?'s':'')+'://'+(q.stage?'stage-':'')+'cim.meebo.com/cim/cim.php?network='+q.network;
-		  d.getElementsByTagName('head')[0].appendChild(s);
-		 })({network: 'drinkrobot_do09qo', stage: false});
-	  }
-	</script>-->
 
     <header>
     
@@ -90,9 +77,42 @@
 
 		<%= yield  %>
     </div>
-	<!--<script type="text/javascript">
-		Meebo('domReady');
-	</script>-->
+	<script type="text/javascript" src="/jShare/jshare.js"></script>
+	<script type="text/javascript"> 
+	$(document).ready(function(){
+		$().jshare({
+	jsharedir:	'/jShare/',	// Set the directory for the jshare files like style.css & script.js
+
+	title:	'<strong>Share, Bookmark or Email</strong> this page.',
+
+	highlight:	true,// Highlight share icon on hover?
+
+	share:	'facebook,twitter,digg,print,google_buzz,delicious,stumbleupon,orkut,tumblr,linkedin,myspace,yahoo_buzz,bebo,mixx,friendfeed',	// Enter buttons to show on share tab
+	bookmark:	'favorites,google,yahoo,live,digg,squidoo',	// Enter buttons to show on bookmark tab
+
+	iconsdir:	'/jShare/images/icons/',	//  Default is jsharedir + images/icons/
+	imageextension:	'png',// Icon image format (jpg, png, gif, etc...)
+
+	opentab:	'share',	// first tab to open when clicked on jshare. share or bookmark?
+
+	blanktarget:	true,// Open links on new tab/window?
+	stickybutton:	true,// Add the sticky button on the side?
+
+	emailform:	false,// Disply email form?
+
+	shareurl:	'',// URL to share (Default is your current page's URL)
+	sharetitle:	'',// Page title to share (Default is your current page's title)
+
+	overlay:	true,// cover up the background?
+	overlayopacity:	0.3,
+	overlaycolor:	'#000',
+
+	speedin:	300,// Set durations of fadein in milliseconds
+	speedout:	300// Set durations of fadeout in milliseconds
+
+		});
+	});
+	</script>
 	<script type="text/javascript">
 		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));

@@ -4,6 +4,7 @@ Drinkrobot::Application.routes.draw do
   resources :ingredients_recipes
   resources :ingredients
   resources :recipes
+  resources :favorites
   devise_for :users
   match 'recipes/search/:name' => 'recipes#search'
   match 'ingredients/search/:name' => 'ingredients#search'
