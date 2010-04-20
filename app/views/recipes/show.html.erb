@@ -5,7 +5,7 @@
 	<div style="float:right;">
 		<a href="#" style="font-size:24px; border: 0px black;"><img src="/images/heart_add.png" /> Add to Favorites</a><br/>
 		<!--<a class="a2a_dd" style="border:0px black;" href="http://www.addtoany.com/share_save"><img src="http://static.addtoany.com/buttons/share_save_171_16.png" width="171" height="16" border="0" alt="Share/Bookmark"/></a><script type="text/javascript">a2a_num_services=10;a2a_color_main="dbf6cb";a2a_color_border="AECADB";a2a_color_link_text="333333";a2a_color_link_text_hover="333333";a2a_prioritize=["facebook","twitter","google_reader","google_buzz","delicious","stumbleupon","digg","reddit","myspace","printfriendly"];</script><script type="text/javascript" src="http://static.addtoany.com/menu/page.js"></script>-->
-		<a id="ck_email" class="stbar chicklet" href="javascript:void(0);"><img src="http://w.sharethis.com/chicklets/email.gif" /></a>
+		<!--<a id="ck_email" class="stbar chicklet" href="javascript:void(0);"><img src="http://w.sharethis.com/chicklets/email.gif" /></a>
 		<a id="ck_facebook" class="stbar chicklet" href="javascript:void(0);"><img src="http://w.sharethis.com/chicklets/facebook.gif" /></a>
 		<a id="ck_twitter" class="stbar chicklet" href="javascript:void(0);"><img src="http://w.sharethis.com/chicklets/twitter.gif" /></a>
 		<a id="ck_sharethis" class="stbar chicklet" href="javascript:void(0);"><img src="http://w.sharethis.com/chicklets/sharethis.gif" />ShareThis</a>
@@ -19,7 +19,7 @@
 		shared_object.attachChicklet("email", document.getElementById("ck_email"));
 		shared_object.attachChicklet("facebook", document.getElementById("ck_facebook"));
 		shared_object.attachChicklet("twitter", document.getElementById("ck_twitter"));
-		</script>
+		</script>-->
 	</div>
 </div>
 
@@ -36,6 +36,9 @@
   <strong>Mixing Instructions:</strong>
   <%=h @recipe.instructions %>
 </p>
-<br/>
+<div style="float:left;">
+	<p>Share This Drink: <script type="text/javascript" src="http://sf2.sociofluid.com/v2?widget=132480-000103040b0c0d11"></script></p><br/>
+</div>
+<div style="clear:both;"></div>
 <%= link_to '←Back', :back, :class => 'super button' %>
 <%= link_to 'Edit', edit_recipe_path(@recipe), :class => 'super button red' %> 
