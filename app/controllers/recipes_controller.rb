@@ -23,7 +23,7 @@ class RecipesController < ApplicationController
   		return
 	else
 		name = params[:name]
-		@recipes = Recipe.search(name).paginate(:per_page => 10, :page => params[:page])
+		@recipes = Recipe.search(name).paginate(:per_page => 15, :page => params[:page])
 	end
 
     respond_to do |format|
