@@ -822,8 +822,8 @@ blockquote p {margin:0; font-size:2em;}
 	content:"\00a0";
 	position:absolute;
 	z-index:-1;
-	bottom:-20px;
-	left:50px;
+	top:20px;
+	left:0px;
 	width:30px;
 	height:30px;
 	background:#075698;
@@ -839,8 +839,8 @@ blockquote p {margin:0; font-size:2em;}
 	content:"\00a0";
 	position:absolute;
 	z-index:-1;
-	bottom:-30px;
-	left:30px;
+	top:10px;
+	left:-20px;
 	width:15px;
 	height:15px;
 	background:#075698;
