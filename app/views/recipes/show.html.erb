@@ -38,9 +38,13 @@
   <strong>Mixing Instructions:</strong>
   <%=h @recipe.instructions %>
 </p>
+
+<!--
 <div style="display:inline;float:left;font-size:24px;padding-top:20px;">
 	Share This Drink: <%= javascript_include_tag 'social' %><br/>
 </div>
+-->
+
 <div style="clear:both;"></div>
 <%= link_to '←Back', :back, :class => 'super button' %>
 <%= link_to 'Edit', edit_recipe_path(@recipe), :class => 'super button red' %> 
