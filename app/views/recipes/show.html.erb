@@ -1,3 +1,5 @@
+<% @page_title = "DrinkRobot.com - " + @recipe.name %>
+
 <div>
 	<h2 style="display:inline;font-size:32px;">
 	  <%=h @recipe.name %>
@@ -6,22 +8,6 @@
 		<% if user_signed_in? %>
 		<a href="#" style="font-size:24px; border: 0px black;"><img src="/images/heart_add.png" /> Add to Favorites</a><br/>
 		<% end %>
-		<!--<a class="a2a_dd" style="border:0px black;" href="http://www.addtoany.com/share_save"><img src="http://static.addtoany.com/buttons/share_save_171_16.png" width="171" height="16" border="0" alt="Share/Bookmark"/></a><script type="text/javascript">a2a_num_services=10;a2a_color_main="dbf6cb";a2a_color_border="AECADB";a2a_color_link_text="333333";a2a_color_link_text_hover="333333";a2a_prioritize=["facebook","twitter","google_reader","google_buzz","delicious","stumbleupon","digg","reddit","myspace","printfriendly"];</script><script type="text/javascript" src="http://static.addtoany.com/menu/page.js"></script>-->
-		<!--<a id="ck_email" class="stbar chicklet" href="javascript:void(0);"><img src="http://w.sharethis.com/chicklets/email.gif" /></a>
-		<a id="ck_facebook" class="stbar chicklet" href="javascript:void(0);"><img src="http://w.sharethis.com/chicklets/facebook.gif" /></a>
-		<a id="ck_twitter" class="stbar chicklet" href="javascript:void(0);"><img src="http://w.sharethis.com/chicklets/twitter.gif" /></a>
-		<a id="ck_sharethis" class="stbar chicklet" href="javascript:void(0);"><img src="http://w.sharethis.com/chicklets/sharethis.gif" />ShareThis</a>
-		<script type="text/javascript">
-			var shared_object = SHARETHIS.addEntry({
-			title: document.title,
-			url: document.location.href
-		});
-
-		shared_object.attachButton(document.getElementById("ck_sharethis"));
-		shared_object.attachChicklet("email", document.getElementById("ck_email"));
-		shared_object.attachChicklet("facebook", document.getElementById("ck_facebook"));
-		shared_object.attachChicklet("twitter", document.getElementById("ck_twitter"));
-		</script>-->
 	</div>
 </div>
 
