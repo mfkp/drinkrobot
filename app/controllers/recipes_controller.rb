@@ -23,13 +23,14 @@ class RecipesController < ApplicationController
   		return
 	else
 		name = params[:name]
-		@results = Recipe.search(name).paginate(:per_page => 10, :page => params[:page])
+		@recipes = Recipe.search(name).paginate(:per_page => 10, :page => params[:page])
 	end
 
     respond_to do |format|
       format.html # search.html.erb
-      format.xml  { render :xml => @results }
-      format.json { render :json => @results }
+      format.xml  { render :xml => @recipes }
+      format.json { render :json => @recipes }
+      format.js
     end
   end
   
