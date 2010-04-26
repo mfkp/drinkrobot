@@ -6,8 +6,10 @@ Drinkrobot::Application.routes.draw do
   resources :recipes
   resources :favorites
   devise_for :users, :path_names => { :sign_up => "register" }
-  match 'recipes/search/:name' => 'recipes#search'
-  match 'ingredients/search/:name' => 'ingredients#search'
+  match 'search/recipes/:name', :to => 'recipes#search'
+  match 'recipes/ingredients/:name', :to => 'recipes#ingredients'
+  match 'ingredients/search/:name', :to => 'ingredients#search'
+  match 'search/ingredients/', :to => 'recipes#search_by_ingredients'
   match '/:controller(/:action(/:id))'
   
   root :to => "index#index"

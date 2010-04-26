@@ -20,10 +20,12 @@
 <% end %>
 </ul>
 
+<% if @recipe.instructions != "" %>
 <p>
   <strong>Mixing Instructions:</strong>
   <%=h @recipe.instructions %>
 </p>
+<% end %>
 
 <!--
 <div style="display:inline;float:left;font-size:24px;padding-top:20px;">

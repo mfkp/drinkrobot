@@ -37,18 +37,41 @@ class RecipesController < ApplicationController
   # GET /recipes/search/string
   # GET /recipes/search/string.xml
   def search_by_ingredients
-  	@ingredients = params[:ingredients]
-  	@recipes = Recipe.find(:all)
-  	#@recipes.each do |@recipe|
-  		
+  	@results = []
+  	recipes = []
+  	@ingredients = params[:ingredients].split(',')
+  	#@ingredients.each do |ingredient|
+  	#	@results.push(Ingredient.find(ingredient))
   	#end
-  	@results = Recipe.find(:all, :conditions => [ "ingredients_recpies_quantaties LIKE ?", @searchphrase])
-	@results = Ingredient.search(params[:name])
+  	@ingredients.each do |ingred|
+  		possiblerecipes = IngredientsRecipesQuantity.find(:all, :conditions => ["ingredient_id = ?", ingred.to_s])
+  		possiblerecipes.each do |recipe|
+  			recipes.push(Recipe.find(recipe.recipe_id))
+  		end
+  	end
+  	recipes.uniq!
+
+  	recipes.each do |recipe|
+  		firstingredient = recipe.ingredients.first
+		if @ingredients.include? firstingredient.id.to_s
+			match = true
+			recipe.ingredients.each do |ingredient|
+				if (!@ingredients.include? ingredient.id.to_s) && (match)
+					match = false
+				end
+			end
+			if match
+				@results.push(recipe)
+			end
+		end
+  	end
+  	@recipes = @results.paginate(:per_page => 15, :page => params[:page])
 
     respond_to do |format|
       format.html # search.html.erb
       format.xml  { render :xml => @recipes }
       format.json { render :json => @results }
+      format.js
     end
   end
 
