@@ -34,15 +34,11 @@ class RecipesController < ApplicationController
     end
   end
   
-  # GET /recipes/search/string
-  # GET /recipes/search/string.xml
+  # GET /search/ingredients/string
   def search_by_ingredients
   	@results = []
   	recipes = []
   	@ingredients = params[:ingredients].split(',')
-  	#@ingredients.each do |ingredient|
-  	#	@results.push(Ingredient.find(ingredient))
-  	#end
   	@ingredients.each do |ingred|
   		possiblerecipes = IngredientsRecipesQuantity.find(:all, :conditions => ["ingredient_id = ?", ingred.to_s])
   		possiblerecipes.each do |recipe|
