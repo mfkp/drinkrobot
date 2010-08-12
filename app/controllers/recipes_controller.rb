@@ -42,15 +42,17 @@ class RecipesController < ApplicationController
   	searchstring = ""
   	
   	@ingredients.each do |ingred|
-  		searchstring += "ingredient_id = " + ingred.to_s
+  		searchstring += ingred.to_s
   		if ingred == @ingredients.last
-  			searchstring += " "
+  			#searchstring += " "
   		else
-  			searchstring += " OR "
+  			#searchstring += " OR "
+  			searchstring += ", "
   		end
   	end
   	
-	possiblerecipes = IngredientsRecipesQuantity.find(:all, :conditions => [searchstring])
+	#possiblerecipes = IngredientsRecipesQuantity.find(:all, :conditions => [searchstring])
+	possiblerecipes = IngredientsRecipesQuantity.find_by_sql(searchstring)
 	possiblerecipes.each do |recipe|
 		recipes.push(Recipe.find(recipe.recipe_id))
 	end
