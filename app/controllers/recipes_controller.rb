@@ -58,20 +58,19 @@ class RecipesController < ApplicationController
 	end
   	#recipes.uniq!
 
-  	recipes.each do |recipe|
-  		firstingredient = recipe.ingredients.first
-		if @ingredients.include? firstingredient.id.to_s
-			match = true
-			recipe.ingredients.each do |ingredient|
-				if (!@ingredients.include? ingredient.id.to_s) && (match)
-					match = false
-				end
-			end
-			if match
-				@results.push(recipe)
-			end
-		end
-  	end
+#  	recipes.each do |recipe|
+#		if @ingredients.include? recipe.ingredients.first.id.to_s
+#			match = true
+#			recipe.ingredients.each do |ingredient|
+#				if (!@ingredients.include? ingredient.id.to_s) && (match)
+#					match = false
+#				end
+#			end
+#			if match
+#				@results.push(recipe)
+#			end
+#		end
+#  	end
   	@recipes = @results.paginate(:per_page => 15, :page => params[:page])
 
     respond_to do |format|
