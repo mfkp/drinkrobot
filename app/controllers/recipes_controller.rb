@@ -52,9 +52,11 @@ class RecipesController < ApplicationController
   		end
   	end
   	
-  	sqlStr = "select recipe_id from ingredients_recipes_quantities where ingredient_id in (" + searchstring + ")"
+  	#sqlStr = "select distinct recipe_id from ingredients_recipes_quantities where ingredient_id in (" + searchstring + ")"
+	sqlStr = "select recipe_id, count(*) AS Number from ingredients_recipes_quantities GROUP BY recipe_id  HAVING Number <= " + @ingredients.length
 	#possiblerecipes = IngredientsRecipesQuantity.find(:all, :conditions => [searchstring])
 	possiblerecipes = IngredientsRecipesQuantity.find_by_sql(sqlStr)
+	
 	possiblerecipes.each do |recipe|
 		recipes.push(Recipe.find(recipe.recipe_id))
 	end
