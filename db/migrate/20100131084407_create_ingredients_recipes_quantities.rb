@@ -1,6 +1,7 @@
 class CreateIngredientsRecipesQuantities < ActiveRecord::Migration
   def self.up
-    create_table :ingredients_recipes_quantities, :id => false do |t|
+    create_table :ingredients_recipes_quantities do |t|
+      t.integer :id
 	  t.integer :recipe_id
   	  t.integer :ingredient_id
   	  t.integer :quantity_id
