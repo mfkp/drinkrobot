@@ -52,24 +52,24 @@ class RecipesController < ApplicationController
 			  WHERE ingredient_id IN(" + ingreds + ") GROUP BY recipe_id  
 			  HAVING Number <= " + @ingredients.length.to_s
 	possiblerecipes = IngredientsRecipesQuantity.find_by_sql(sqlStr)
-	
+#	
 #	possiblerecipes.each do |recipe|
 #		recipes.push(Recipe.find(recipe.recipe_id))
 #	end
 
-#  	recipes.each do |recipe|
-#		if @ingredients.include? recipe.ingredients.first.id.to_s
-#			match = true
-#			recipe.ingredients.each do |ingredient|
-#				if (!@ingredients.include? ingredient.id.to_s) && (match)
-#					match = false
-#				end
-#			end
-#			if match
-#				@results.push(recipe)
-#			end
-#		end
-#  	end
+  	recipes.each do |recipe|
+		if @ingredients.include? recipe.ingredients.first.id.to_s
+			match = true
+			recipe.ingredients.each do |ingredient|
+				if (!@ingredients.include? ingredient.id.to_s) && (match)
+					match = false
+				end
+			end
+			if match
+				@results.push(recipe)
+			end
+		end
+  	end
   	@recipes = @results.paginate(:per_page => 15, :page => params[:page])
 
     respond_to do |format|
