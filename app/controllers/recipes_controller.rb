@@ -45,6 +45,7 @@ class RecipesController < ApplicationController
   		searchstring += ingred.to_s
   		if ingred == @ingredients.last
   			#searchstring += " "
+  			searchstring += ""
   		else
   			#searchstring += " OR "
   			searchstring += ", "
