@@ -52,8 +52,9 @@ class RecipesController < ApplicationController
   		end
   	end
   	
+  	sqlStr = "select recipe_id from ingredients_recipes_quantities where ingredient_id in (" + searchstring + ")"
 	#possiblerecipes = IngredientsRecipesQuantity.find(:all, :conditions => [searchstring])
-	possiblerecipes = IngredientsRecipesQuantity.find_by_sql(searchstring)
+	possiblerecipes = IngredientsRecipesQuantity.find_by_sql(sqlStr)
 	possiblerecipes.each do |recipe|
 		recipes.push(Recipe.find(recipe.recipe_id))
 	end
