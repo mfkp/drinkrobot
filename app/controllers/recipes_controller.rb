@@ -43,25 +43,20 @@ class RecipesController < ApplicationController
   	
   	@ingredients.each do |ingred|
   		searchstring += ingred.to_s
-  		if ingred == @ingredients.last
-  			#searchstring += " "
-  			searchstring += ""
-  		else
-  			#searchstring += " OR "
+  		if ingred != @ingredients.last
   			searchstring += ", "
   		end
   	end
   	
-  	#sqlStr = "select distinct recipe_id from ingredients_recipes_quantities where ingredient_id in (" + searchstring + ")"
-	sqlStr = "select recipe_id, count(*) AS Number from ingredients_recipes_quantities 
-			  WHERE ingredient_id in(" + searchstring + ") GROUP BY recipe_id  HAVING Number <= " + @ingredients.length.to_s
-	#possiblerecipes = IngredientsRecipesQuantity.find(:all, :conditions => [searchstring])
+	sqlStr = "SELECT distinct recipe_id, count(*) AS Number FROM ingredients_recipes_quantities 
+			  WHERE ingredient_id IN(" + searchstring + ") GROUP BY recipe_id  
+			  HAVING Number <= " + @ingredients.length.to_s
 	possiblerecipes = IngredientsRecipesQuantity.find_by_sql(sqlStr)
 	
 	possiblerecipes.each do |recipe|
 		recipes.push(Recipe.find(recipe.recipe_id))
 	end
-  	recipes.uniq!
+  	#recipes.uniq!
 
   	recipes.each do |recipe|
   		firstingredient = recipe.ingredients.first
