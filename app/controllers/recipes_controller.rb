@@ -36,27 +36,26 @@ class RecipesController < ApplicationController
   
   # GET /search/ingredients/string
   def search_by_ingredients
+  	@ingredients = params[:ingredients].split(',')
   	@results = []
   	recipes = []
-  	@ingredients = params[:ingredients].split(',')
-  	searchstring = ""
+  	ingreds = ""
   	
   	@ingredients.each do |ingred|
-  		searchstring += ingred.to_s
+  		ingreds += ingred.to_s
   		if ingred != @ingredients.last
-  			searchstring += ", "
+  			ingreds += ", "
   		end
   	end
   	
 	sqlStr = "SELECT distinct recipe_id, count(*) AS Number FROM ingredients_recipes_quantities 
-			  WHERE ingredient_id IN(" + searchstring + ") GROUP BY recipe_id  
+			  WHERE ingredient_id IN(" + ingreds + ") GROUP BY recipe_id  
 			  HAVING Number <= " + @ingredients.length.to_s
 	possiblerecipes = IngredientsRecipesQuantity.find_by_sql(sqlStr)
 	
-	possiblerecipes.each do |recipe|
-		recipes.push(Recipe.find(recipe.recipe_id))
-	end
-  	#recipes.uniq!
+#	possiblerecipes.each do |recipe|
+#		recipes.push(Recipe.find(recipe.recipe_id))
+#	end
 
 #  	recipes.each do |recipe|
 #		if @ingredients.include? recipe.ingredients.first.id.to_s
