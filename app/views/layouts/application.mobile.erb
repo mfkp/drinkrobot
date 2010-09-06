@@ -63,13 +63,43 @@
 </head>
 <body>
 <div id="about" class="selectable"> 
-    <p><img src="jqtouch.png" /></p> 
-    <p><strong>jQTouch</strong><br />Version 1.0 beta<br /> 
-        <a href="http://www.davidkaneda.com">By David Kaneda</a></p> 
-    <p><em>Create powerful mobile apps with<br /> just HTML, CSS, and jQuery.</em></p> 
-    <p> 
-        <a href="http://twitter.com/jqtouch" target="_blank">@jQTouch on Twitter</a> 
-    </p> 
+    <h2>About DrinkRobot&#0153;</h2>
+	<p>
+	DrinkRobot was created by <strong>Kyle Powers, Katie Macias, Cole Malmberg,</strong> 
+	and <strong>Xin Guo</strong> as a class project in CSCE 378 Human Computer Interaction. 
+	DrinkRobot is a free service, and will always be that way. If you want to say thanks, 
+	<img name="drink" src="/images/drink_empty.png" /> 
+	<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HUVGH9FGSXAJQ" target="blank" onMouseOver="drink.src='/images/drink.png'" onMouseOut="drink.src='/images/drink_empty.png'"> 
+	buy me a drink!
+	</a>
+	</p>
+
+	<div style="clear:both;padding-bottom:50px;width:100%;"></div>
+
+	<div style="position:relative;float:left;">
+		<h2>Technology</h2>
+		<div style="float:left;margin-right:-100px;">
+			<%= image_tag "rails.png", :width => 200 %> <br/>
+			<span style="margin-left:125px;">
+				<a href="http://rubyonrails.org/" target="_blank">Ruby on Rails</a>, 
+				<a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a>, 
+				and <a href="http://jquery.com/" target="_blank">jQuery</a>.
+				</span>
+		</div>
+		<div style="float:left;">
+			<br/>
+			<%= image_tag "postgresql.png", :width => 125 %> <br/><br/>
+			<%= image_tag "jquery.png", :width => 200 %>
+		</div>
+	</div>
+
+	<div style="position:relative;float:left;padding-left:200px;">
+		<h2>Hosting</h2>
+		<div style="float:left;margin-right:-75px;">
+			<a href="http://www.heroku.com/" target="_blank" style="border:none;"><%= image_tag "heroku.png", :width => 200 %></a><br/><br/>
+			<span>Ruby on Rails hosting provided by <a href="http://www.heroku.com/" target="_blank">Heroku.com</a></span>
+		</div>
+	</div>
     <p><br /><br /><a href="#" class="grayButton goback">Close</a></p> 
 </div> 
 
