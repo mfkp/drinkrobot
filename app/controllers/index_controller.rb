@@ -1,7 +1,7 @@
 class IndexController < ApplicationController
   def index
     respond_to do |format|
-      #format.html # index.html.erb
+      format.html # index.html.erb
       format.mobile # index.mobile.erb
       format.js
     end
