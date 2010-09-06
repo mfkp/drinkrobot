@@ -1,6 +1,5 @@
-require 'is_it_mobile' 
 class ApplicationController < ActionController::Base
-  include IsItMobile::ForRails
+  has_mobile_fu
   protect_from_forgery
   layout 'application'
 end
