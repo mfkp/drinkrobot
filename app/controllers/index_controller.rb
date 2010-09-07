@@ -12,4 +12,7 @@ class IndexController < ApplicationController
       format.js
     end
   end
+  def mobileview
+  	session[:mobile_view] = !session[:mobile_view]
+  end
 end
