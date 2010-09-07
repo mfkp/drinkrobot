@@ -3,13 +3,14 @@
     <h1>Drink Search</h1> 
     <a href="#" class="back">Back</a> 
 </div> 
-<form action="/search/recipes" method="post" id="searchForm"> 
-    <ul class="edit rounded"> 
-        <li><input type="text" name="recipe[name]" placeholder="Drink Name" id="recipe_name" /></li> 
-        <li><input type="submit" name="submit" value="Search" id="recipe_submit" class="greenButton" target="_webapp"/></li> 
-        <li><a href="#" style="margin: 10px;" class="greenButton" target="_webapp" onClick="$('form').submit();return false;">Search</a></li>
-    </ul> 
-</form> 
+<ul class="edit rounded"> 
+<% form_for :recipe, :url => { :controller => "recipes", :action => "search", :name => "name" } do |f| %>
+	<%= f.error_messages %>
+	<%= f.text_field :name %><br />
+	<%= f.submit "Search", :class => 'greenButton' %>
+<% end %>
+</ul>
+
 </div> 
 <div id="home" class="current"> 
 <div class="toolbar"> 
