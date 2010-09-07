@@ -80,11 +80,11 @@ body.landscape .toolbar > h1 {
     border-width: 0 5px;
 }
 .greenButton {
-    -webkit-border-image: url(img/blueButton.png) 0 5 0 5;
+    -webkit-border-image: url(img/greenButton.png) 0 5 0 5;
     border-width: 0 5px;
 }
 .redButton {
-    -webkit-border-image: url(img/blueButton.png) 0 5 0 5;
+    -webkit-border-image: url(img/redButton.png) 0 5 0 5;
     border-width: 0 5px;
 }
 .back, .backHome{
