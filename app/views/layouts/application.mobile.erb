@@ -15,12 +15,12 @@
 		    startupScreen: 'jqt_startup.png',
 		    statusBar: 'black',
 		    preloadImages: [
-		        '/themes/jqt/img/back_button.png',
-		        '/themes/jqt/img/back_button_clicked.png',
-		        '/themes/jqt/img/button_clicked.png',
-		        '/themes/jqt/img/grayButton.png',
-		        '/themes/jqt/img/whiteButton.png',
-		        '/themes/jqt/img/loading.gif'
+		        'themes/jqt/img/back_button.png',
+		        'themes/jqt/img/back_button_clicked.png',
+		        'themes/jqt/img/button_clicked.png',
+		        'themes/jqt/img/grayButton.png',
+		        'themes/jqt/img/whiteButton.png',
+		        'themes/jqt/img/loading.gif'
 		        ]
 		});
 		// Some sample Javascript functions:
@@ -62,24 +62,26 @@
 	</script> 
 </head>
 <body>
-	<% if flash[:notice] %>
-	<span id="notice">
-		<%= flash[:notice] %>
-	</span>
-	<% end %>
-	
-	<% if flash[:error] %>
-	<span id="notice">
-		<%= flash[:error] %>
-	</span>
-	<% end %>
-	
-	<% if flash[:alert] %>
-	<span id="notice">
-		<%= flash[:alert] %>
-	</span>
-	<% end %>
+	<div id="contentcontainer">
+    	<% if flash[:notice] %>
+    	<span id="notice">
+			<%= flash[:notice] %>
+		</span>
+		<% end %>
+		
+		<% if flash[:error] %>
+    	<span id="notice">
+			<%= flash[:error] %>
+		</span>
+		<% end %>
+		
+		<% if flash[:alert] %>
+		<span id="notice">
+			<%= flash[:alert] %>
+		</span>
+		<% end %>
 
-	<%= yield  %>
+		<%= yield  %>
+    </div>
 </body>
 </html>
