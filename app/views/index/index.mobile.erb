@@ -3,11 +3,11 @@
     <h1>Drink Search</h1> 
     <a href="#" class="back">Back</a> 
 </div> 
-<form action="/search/recipes/name" method="post"> 
+<form action="/search/recipes/name" method="post" id="searchForm"> 
     <ul class="edit rounded"> 
         <li><input type="text" name="recipe[name]" placeholder="Drink Name" id="recipe_name" /></li> 
         <li><input type="submit" name="submit" value="Search" id="recipe_submit" class="greenButton" target="_webapp"/></li> 
-        <li><a href="#" style="margin: 10px;" class="greenButton submit" target="_webapp">Search</a></li>
+        <li><a href="#" style="margin: 10px;" class="greenButton submit" target="_webapp" onClick="document.searchForm.submit();">Search</a></li>
     </ul> 
 </form> 
 </div> 

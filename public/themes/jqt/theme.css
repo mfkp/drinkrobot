@@ -75,18 +75,6 @@ body.landscape .toolbar > h1 {
     left: 6px;
     right: auto;
 }
-.blueButton {
-    -webkit-border-image: url(img/blueButton.png) 0 5 0 5;
-    border-width: 0 5px;
-}
-.greenButton {
-    -webkit-border-image: url(img/greenButton.png) 0 5 0 5;
-    border-width: 0 5px;
-}
-.redButton {
-    -webkit-border-image: url(img/redButton.png) 0 5 0 5;
-    border-width: 0 5px;
-}
 .back, .backHome{
     left: 6px;
     right: auto;
@@ -108,8 +96,7 @@ body.landscape .toolbar > h1 {
     line-height: 24px;
     font-weight: bold;
 }
-.whiteButton,
-.grayButton {
+.whiteButton, .grayButton, .blueButton, .greenButton, .redButton {
     display: block;
     border-width: 0 12px;
     padding: 10px;
@@ -126,6 +113,15 @@ body.landscape .toolbar > h1 {
 .grayButton {
     -webkit-border-image: url(img/grayButton.png) 0 12 0 12;
     color: #FFFFFF;
+}
+.blueButton {
+    -webkit-border-image: url(img/blueButton.png) 0 12 0 12;
+}
+.greenButton {
+    -webkit-border-image: url(img/greenButton.png) 0 12 0 12;
+}
+.redButton {
+    -webkit-border-image: url(img/redButton.png) 0 12 0 12;
 }
 /* @end */
 /* @group Lists */
@@ -261,7 +257,7 @@ ul.form li.error + li.error {
     border-top: 0;
 }
 ul li input[type="text"], ul li input[type="password"], ul li textarea, ul li select {
-    color: #777;
+    color: #fff;
     background: transparent url(../.png);
     border: 0;
     font: normal 17px Helvetica;
