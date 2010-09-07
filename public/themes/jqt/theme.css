@@ -145,7 +145,6 @@ ul.rounded li:last-child, ul.rounded li:last-child a {
     -webkit-border-bottom-right-radius: 8px;
 }
 ul li {
-    color: #666;
     border-top: 1px solid #333;
     border-bottom: #555858;
     list-style-type: none;

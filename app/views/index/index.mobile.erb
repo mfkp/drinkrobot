@@ -1,44 +1,3 @@
-<div id="about" class="selectable"> 
-    <h2>About DrinkRobot&#0153;</h2>
-	<p>
-	DrinkRobot was created by <strong>Kyle Powers, Katie Macias, Cole Malmberg,</strong> 
-	and <strong>Xin Guo</strong> as a class project in CSCE 378 Human Computer Interaction. 
-	DrinkRobot is a free service, and will always be that way. If you want to say thanks, 
-	<img name="drink" src="/images/drink_empty.png" /> 
-	<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HUVGH9FGSXAJQ" target="blank" onMouseOver="drink.src='/images/drink.png'" onMouseOut="drink.src='/images/drink_empty.png'"> 
-	buy me a drink!
-	</a>
-	</p>
-
-	<div style="clear:both;"></div>
-
-	<div style="position:relative;float:left;">
-		<h2>Technology</h2>
-		<span>
-			<a href="http://rubyonrails.org/" target="_blank">Ruby on Rails</a>, 
-			<a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a>, 
-			and <a href="http://jquery.com/" target="_blank">jQuery</a>.
-		</span>
-	</div>
-	<div style="clear:both;"></div>
-    <p><br /><br /><a href="#" class="grayButton goback">Close</a></p> 
-</div> 
-
-<div id="extensions"> 
-<div class="toolbar"> 
-    <h1>Extensions</h1> 
-    <a class="back" href="#home">Home</a> 
-</div> 
-<div class="info"> 
-    These apps open in a new window. Don&#8217;t forget to save them to your home screen to enable full-screen mode.
-</div> 
-<ul class="rounded"> 
-    <li class="forward"><a target="_webapp" href="../ext_location/">Geo Location</a></li> 
-    <li class="forward"><a target="_webapp" href="../ext_offline/">Offline Utility</a></li> 
-    <li class="forward"><a target="_webapp" href="../ext_floaty/">Floaty Bar</a></li> 
-    <li class="forward"><a target="_webapp" href="../ext_autotitles/">Auto Titles</a></li> 
-</ul> 
-</div> 
 <div id="forms"> 
 <div class="toolbar"> 
     <h1>Forms</h1> 
@@ -76,24 +35,19 @@
 <div class="toolbar"> 
     <h1>DrinkRobot</h1>
     <% if user_signed_in? %>  
-		<%= link_to "Sign out", destroy_user_session_path, :class => 'button slideup' %>
+		<%= link_to "Sign Out", destroy_user_session_path, :class => 'button slideup' %>
 	<% else %>  
-		<%= link_to "Register/Login", new_user_session_path, :class => 'button slideup' %>
+		<%= link_to "Sign In", new_user_session_path, :class => 'button slideup' %>
 	<% end %>
 </div> 
 <ul class="rounded"> 
 	<li class="forward"><a href="#search">Search for Drink</a></li>
 	<li class="forward"><a href="#browse">Browse</a></li>
 	<li class="forward"><a href="#about">About</a></li>
-    <li class="arrow"><a href="#ui">User Interface</a> <small class="counter">4</small></li> 
-    <li class="arrow"><a href="#callbacks">Callback Events</a> <small class="counter">3</small></li> 
-    <li class="arrow"><a href="#extensions">Extensions</a> <small class="counter">4</small></li> 
 </ul> 
-<h2>External Links</h2> 
+<h2>Options</h2> 
 <ul class="rounded"> 
-    <li class="forward"><a href="http://www.jqtouch.com/" target="_blank">Homepage</a></li> 
-    <li class="forward"><a href="http://www.twitter.com/jqtouch" target="_blank">Twitter</a></li> 
-    <li class="forward"><a href="http://code.google.com/p/jqtouch/w/list" target="_blank">Google Code</a></li> 
+    <li class="arrow"><a href="#">Switch to full site</a></li> 
 </ul> 
 <ul class="individual"> 
     <li><a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#100;&#107;&#064;kylepowers@gmail&#046;&#099;&#111;&#109;" target="_blank">Email</a></li> 
@@ -103,56 +57,4 @@
     <p>DrinkRobot is a free service brought to you by Kyle Powers. Please enjoy and drink responsibly!</p> 
 </div> 
 </div> 
-<div id="metal"> 
-<div class="toolbar"> 
-    <h1>Metal Lists</h1> 
-    <a href="#" class="back">Back</a> 
-</div> 
-<ul class="metal"> 
-    <li class="arrow"><a href="#"><small>AM</small> 9:40 <em>Buenos Aires</em></a></li> 
-    <li class="arrow"><a href="#"><small>PM</small> 19:40 <em>Singapur</em></a></li> 
-    <li class="arrow"><a href="#"><small>PM</small> 22:40 <em>Japan</em></a></li> 
-    <li class="arrow"><a href="#"><small>PM</small> 11:40 <em>New York</em></a></li> 
-    <li class="arrow"><a href="#"><small>PM</small> 9:40 <em>Ontario</em></a></li> 
-</ul> 
-</div> 
-<div id="pageevents"> 
-<div class="toolbar"> 
-    <h1>Page Events</h1> 
-    <a class="back" href="#">Events</a> 
-</div> 
-<div class="info" style="font-weight: normal;"> 
-</div> 
-</div> 
-<div id="plastic"> 
-<div class="toolbar"> 
-    <h1>Plastic Lists</h1> 
-    <a href="#" class="back">Back</a> 
-</div> 
-<ul class="plastic"> 
-    <li class="arrow"><a href="#">Simple list</a></li> 
-    <li class="arrow"><a href="#">Contact list</a></li> 
-    <li class="arrow"><a href="#">Content List</a></li> 
-    <li class="arrow"><a href="#">Metal list</a></li> 
-</ul> 
-<div class="info"> 
-    <p><strong>Best enjoyed on a real iPhone</strong></p> 
-</div> 
-</div> 
-<div id="ui"> 
-<div class="toolbar"> 
-    <h1>UI Demos</h1> 
-    <a class="back" href="#">Home</a> 
-</div> 
 
-<h2>Lists</h2> 
-<ul class="rounded"> 
-    <li class="arrow"><a href="#edge">Edge to Edge</a></li> 
-    <li class="arrow"><a href="#plastic">Plastic</a></li> 
-    <li class="arrow"><a href="#metal">Metal</a></li> 
-</ul> 
-<h2>Forms</h2> 
-<ul class="rounded"> 
-    <li class="arrow"><a href="#forms">Forms</a></li> 
-</ul> 
-</div> 
