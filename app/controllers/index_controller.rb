@@ -13,9 +13,9 @@ class IndexController < ApplicationController
     end
   end
   def mobileview
-  	puts session[:mobile_view]
+  	flash[:alert] = session[:mobile_view]
   	session[:mobile_view] = !session[:mobile_view]
-  	puts session[:mobile_view]
+  	flash[:error] = session[:mobile_view]
   	redirect_to :controller => 'index', :action => 'index'
   end
 end
