@@ -1,33 +1,12 @@
 <div id="search"> 
 <div class="toolbar"> 
-    <h1>Forms</h1> 
+    <h1>Drink Search</h1> 
     <a href="#" class="back">Back</a> 
 </div> 
-<form> 
+<form action="/search/recipes/name" method="post"> 
     <ul class="edit rounded"> 
-        <li><input type="text" name="name" placeholder="Text" id="some_name" /></li> 
-        <li><input type="text" name="search" placeholder="Search" id="some_name" /></li> 
-        <li><input type="text" name="phone" placeholder="Phone" id="some_name"  /></li> 
-        <li><input type="text" name="zip" placeholder="Numbers" id="some_name" /></li> 
-        <li><textarea placeholder="Textarea" ></textarea></li> 
-        <li>Sample Toggle <span class="toggle"><input type="checkbox" /></span></li> 
-        <li> 
-            <select id="lol"> 
-                <optgroup label="Swedish Cars"> 
-                    <option value ="volvo">Volvo</option> 
-                    <option value ="saab">Saab</option> 
-                </optgroup> 
-                <optgroup label="German Cars"> 
-                    <option value ="mercedes">Mercedes</option> 
-                    <option value ="audi">Audi</option> 
-                </optgroup> 
-            </select> 
-        </li> 
-        <li><input type="password" name="some_name" value="iphonedelcopon" id="some_name" /></li> 
-        <li><input type="checkbox" name="some_name" value="Hello" id="some_name" title="V8 Engine Type" /></li> 
-        <li><input type="checkbox" name="some_name" value="Hello" checked="checked" id="some_name" title="V12 Engine Type" /></li> 
-        <li><input type="radio" name="some_name" value="Hello" id="some_name" title="Only cars" /></li> 
-        <li><input type="radio" name="some_name" value="Hello" id="some_name" title="Only motorbikes" /></li> 
+        <li><input type="text" name="recipe[name]" placeholder="Drink Name" id="recipe_name" /></li> 
+        <li><input type="submit" name="submit" value="Search" id="recipe_submit" /></li> 
     </ul> 
 </form> 
 </div> 
