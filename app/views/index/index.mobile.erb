@@ -6,11 +6,10 @@
 <ul class="edit rounded"> 
 <% form_for :recipe, :url => { :controller => "recipes", :action => "search", :name => "name" } do |f| %>
 	<%= f.error_messages %>
-	<%= f.text_field :name %><br />
-	<%= f.submit "Search", :class => 'greenButton' %>
+	<li><%= f.text_field :name %></li>
+	<li><%= f.submit "Search", :class => 'greenButton' %></li>
 <% end %>
 </ul>
-
 </div> 
 <div id="home" class="current"> 
 <div class="toolbar"> 
