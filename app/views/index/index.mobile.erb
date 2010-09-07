@@ -15,9 +15,9 @@
 <div class="toolbar"> 
     <h1>DrinkRobot</h1>
     <% if user_signed_in? %>  
-		<%= link_to "Sign Out", destroy_user_session_path, :class => 'button slideup' %>
+		<%= link_to "Sign Out", destroy_user_session_path, :class => 'button' %>
 	<% else %>  
-		<%= link_to "Sign In", new_user_session_path, :class => 'button slideup' %>
+		<%= link_to "Sign In", new_user_session_path, :class => 'button' %>
 	<% end %>
 </div> 
 <ul class="rounded"> 
