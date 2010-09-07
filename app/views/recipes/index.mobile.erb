@@ -16,8 +16,8 @@
 			<% firstchar = "" %>
 			<% for recipe in @recipes %>
 				<% if (recipe.name[0] != firstchar) %>
-					<li class="sep"><%= recipe.name.titleize[0].to_s %></li> 
-					<% firstchar = recipe.name.titleize[0] %>
+					<li class="sep"><%= recipe.name.titleize[0].chr %></li> 
+					<% firstchar = recipe.name.titleize[0].chr %>
 				<% end %>
 				<li><%= link_to h(recipe.name), recipe %></li> 
 			<% end %>
