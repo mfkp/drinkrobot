@@ -151,8 +151,8 @@
                 $body
                     .bind('touchstart', handleTouch)
                     .bind('orientationchange', updateOrientation)
-                    .trigger('orientationchange')
-                    .submit(submitForm);
+                    .trigger('orientationchange');
+                    //.submit(submitForm);
                     
                 if (jQTSettings.useFastTouch && $.support.touch)
                 {
