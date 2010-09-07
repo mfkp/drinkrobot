@@ -13,7 +13,7 @@
 		<ul class="edgetoedge"> 
 			<% firstchar = "" %>
 			<% for recipe in @recipes %>
-				<% if (!recipe.name.titleize[0].starts_with?(firstchar) || !recipe.name.titleize[0].starts_with?('The ') %>
+				<% if (!recipe.name.titleize.starts_with?(firstchar) || !recipe.name.titleize.starts_with?('The ') %>
 					<li class="sep"><%= recipe.name.titleize[0].chr %></li> 
 					<% firstchar = recipe.name.titleize[0].chr %>
 				<% end %>
