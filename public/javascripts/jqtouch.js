@@ -138,7 +138,7 @@
                 touchSelectors.push(jQTSettings.backSelector);
                 touchSelectors.push(jQTSettings.submitSelector);
                 $(touchSelectors.join(', ')).css('-webkit-touch-callout', 'none');
-                $(jQTSettings.backSelector).tap(liveTap);
+                $(jQTSettings.backSelector).tap(liveTinitap);
                 $(jQTSettings.submitSelector).tap(submitParentForm);
 
                 $body = $('body');
@@ -151,8 +151,8 @@
                 $body
                     .bind('touchstart', handleTouch)
                     .bind('orientationchange', updateOrientation)
-                    .trigger('orientationchange')
-                    .submit(submitForm);
+                    .trigger('orientationchange');
+                    //.submit(submitForm);
                     
                 if (jQTSettings.useFastTouch && $.support.touch)
                 {
