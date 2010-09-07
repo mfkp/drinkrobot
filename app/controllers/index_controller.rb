@@ -13,9 +13,7 @@ class IndexController < ApplicationController
     end
   end
   def mobileview
-  	flash[:error] = 'before: ', session[:mobile_view]
   	session[:mobile_view] = !session[:mobile_view]
-  	flash[:error] = 'after: ', session[:mobile_view]
   	redirect_to :controller => 'index', :action => 'index'
   end
 end
