@@ -44,7 +44,7 @@ body.landscape .toolbar > h1 {
     margin-left: -125px;
     width: 250px;
 }
-.button, .back, .cancel, .add, .next_page, .previous_page {
+.button, .back, .cancel, .add, .next_page, .previous_page, .backHome {
     position: absolute;
     overflow: hidden;
     top: 8px;
