@@ -255,17 +255,6 @@ ul.form li.error {
 ul.form li.error + li.error {
     border-top: 0;
 }
-ul li input[type="text"], ul li input[type="password"], ul li textarea, ul li select {
-    color: #fff;
-    background: transparent url(../.png);
-    border: 0;
-    font: normal 17px Helvetica;
-    padding: 0;
-    display: inline-block;
-    margin-left: 0px;
-    width: 100%;
-    -webkit-appearance: textarea;
-}
 ul li input[type="text"],
 ul li input[type="password"],
 ul li input[type="tel"],
@@ -275,11 +264,11 @@ ul li input[type="email"],
 ul li input[type="url"],
 ul li textarea,
 ul li select {
-    color: #777;
-    background: transparent url('data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==');
+    color: #fff;
+    background: #666;
     border: 0;
     font: normal 17px "Helvetica Neue", Helvetica;
-    padding: 0;
+    padding: 10px 0px 10px 5px;
     display: inline-block;
     margin-left: 0px;
     width: 100%;
