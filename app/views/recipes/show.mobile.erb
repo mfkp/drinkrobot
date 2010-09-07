@@ -1,0 +1,39 @@
+<% @page_title = "DrinkRobot.com - " + @recipe.name %>
+
+<div class="toolbar"> 
+    <h1><%= @recipe.name %></h1> 
+    <a href="/" class="backHome">Back</a> 
+</div> 
+
+
+<div>
+	<h2 style="display:inline;font-size:32px;">
+	  <%=h @recipe.name %>
+	</h2>
+	<div style="float:right;">
+		<% if user_signed_in? %>
+		<a href="#" style="font-size:24px; border: 0px black;"><img src="/images/heart_add.png" /> Add to Favorites</a><br/>
+		<% end %>
+	</div>
+</div>
+
+
+<ul>
+<% count = 0 %>
+<% @ingredients.each do |ingredient| %>
+	<li><p><% if !@quantities[count].nil? %><%= @quantities[count].quantity %><% end %> <%= ingredient.name %></p></li>
+<% count = count + 1 %>
+<% end %>
+</ul>
+
+<% if @recipe.instructions != "" %>
+<p>
+  <strong>Mixing Instructions:</strong>
+  <%=h @recipe.instructions %>
+</p>
+<% end %>
+
+<div style="clear:both;"></div>
+<br/>
+
+<%= link_to 'Back', :back, :class => 'super button' %>
