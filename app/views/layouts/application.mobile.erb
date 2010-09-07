@@ -88,27 +88,6 @@
     <p><br /><br /><a href="#" class="grayButton goback">Close</a></p> 
 </div> 
 
-<div id="edge"> 
-<div class="toolbar"> 
-    <h1>Edge to Edge</h1> 
-    <a href="#" class="back">Back</a> 
-</div> 
-<ul class="edgetoedge"> 
-    <li class="sep">F</li> 
-    <li><a href="#">Flintstone, <em>Fred</em></a></li> 
-    <li><a href="#">Flintstone, <em>Pebble</em></a></li> 
-    <li><a href="#">Flintstone, <em>Wilma</em></a></li> 
-    <li class="sep">J</li> 
-    <li><a href="#">Jetson, <em>Elroy</em></a></li> 
-    <li><a href="#">Jetson, <em>George</em></a></li> 
-    <li><a href="#">Jetson, <em>Jane</em></a></li> 
-    <li><a href="#">Jetson, <em>Judy</em></a></li> 
-    <li class="sep">R</li> 
-    <li><a href="#">Rubble, <em>Bambam</em></a></li> 
-    <li><a href="#">Rubble, <em>Barney</em></a></li> 
-    <li><a href="#">Rubble, <em>Betty</em></a></li> 
-</ul> 
-</div> 
 <div id="extensions"> 
 <div class="toolbar"> 
     <h1>Extensions</h1> 
@@ -161,9 +140,9 @@
 <div class="toolbar"> 
     <h1>DrinkRobot</h1>
     <% if user_signed_in? %>  
-		<%= link_to "Sign out", destroy_user_session_path, :class => 'button slideup', id => 'infoButton' %>
+		<%= link_to "Sign out", destroy_user_session_path, :class => 'button slideup' %>
 	<% else %>  
-		<%= link_to "Register/Login", new_user_session_path, :class => 'button slideup', id => 'infoButton' %>
+		<%= link_to "Register/Login", new_user_session_path, :class => 'button slideup' %>
 	<% end %>
 </div> 
 <ul class="rounded"> 
