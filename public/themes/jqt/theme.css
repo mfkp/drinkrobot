@@ -79,6 +79,14 @@ body.landscape .toolbar > h1 {
     -webkit-border-image: url(img/blueButton.png) 0 5 0 5;
     border-width: 0 5px;
 }
+.greenButton {
+    -webkit-border-image: url(img/blueButton.png) 0 5 0 5;
+    border-width: 0 5px;
+}
+.redButton {
+    -webkit-border-image: url(img/blueButton.png) 0 5 0 5;
+    border-width: 0 5px;
+}
 .back, .backHome{
     left: 6px;
     right: auto;
@@ -444,7 +452,7 @@ ul.plastic li {
     border-bottom-color: #000;
     color: #666;
     list-style-type: none;
-    overflow: hidden;
+    overflow: hidden;id
     padding: 10px 10px 10px 10px;
 }
 ul.plastic li a.active.loading {
