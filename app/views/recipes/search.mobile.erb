@@ -5,7 +5,7 @@
     <a href="/" class="backHome">Back</a> 
 </div> 
 <div id="recipes">
-  <% if @recipes.length == 0 %>
+	<% if @recipes.length == 0 %>
 		<p>No Results Found</p>
 	<% else %>
 		<%= will_paginate @recipes %>
@@ -13,7 +13,7 @@
 		<ul class="edgetoedge"> 
 			<% firstchar = "" %>
 			<% for recipe in @recipes %>
-				<% if (!recipe.name.titleize.starts_with?(firstchar) && !recipe.name.titleize.starts_with?('The ') %>
+				<% if (!recipe.name.titleize.starts_with?(firstchar) && !recipe.name.titleize.starts_with?('The ')) %>
 					<li class="sep"><%= recipe.name.titleize[0].chr %></li> 
 					<% firstchar = recipe.name.titleize[0].chr %>
 				<% end %>
