@@ -36,7 +36,6 @@
 	</script> 
 </head>
 <body>
-	<div id="jqt"> 
 	<% if flash[:notice] %>
 	<span id="notice">
 		<%= flash[:notice] %>
@@ -56,6 +55,5 @@
 	<% end %>
 
 	<%= yield  %>
-	</div>
 </body>
 </html>
