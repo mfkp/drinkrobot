@@ -7,7 +7,7 @@
 <% form_for :recipe, :url => { :controller => "recipes", :action => "search", :name => "name" }, :html => { :class => "styledform" } do |f| %>
 	<%= f.error_messages %>
 	<li><%= f.text_field :name %></li>
-	<li><%= f.submit "Search", :class => 'greenButton' %></li>
+	<li><%= f.submit "Search", :class => 'greenButton', :style => 'width:100%;' %></li>
 <% end %>
 </ul>
 </div> 
