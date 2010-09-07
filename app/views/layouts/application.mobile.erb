@@ -159,13 +159,16 @@
 </div> 
 <div id="home" class="current"> 
 <div class="toolbar"> 
-    <h1>DrinkRobot</h1> 
-    <a class="button slideup" id="infoButton" href="#about">About</a> 
+    <h1>DrinkRobot</h1>
+    <% if user_signed_in? %>  
+		<%= link_to "Sign out", destroy_user_session_path, :class => 'button slideup', id => 'infoButton' %>
+	<% else %>  
+		<%= link_to "Register/Login", new_user_session_path, :class => 'button slideup', id => 'infoButton' %>
+	<% end %>
 </div> 
 <ul class="rounded"> 
 	<li class="forward"><a href="#search">Search for Drink</a></li>
 	<li class="forward"><a href="#browse">Browse</a></li>
-	<li class="forward"><a href="#login">Log In</a></li>
 	<li class="forward"><a href="#about">About</a></li>
     <li class="arrow"><a href="#ui">User Interface</a> <small class="counter">4</small></li> 
     <li class="arrow"><a href="#callbacks">Callback Events</a> <small class="counter">3</small></li> 
