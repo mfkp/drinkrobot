@@ -104,6 +104,7 @@ body.landscape .toolbar > h1 {
     font-size: 20px;
     font-weight: bold;
     text-decoration: inherit;
+    background: transparent;
 }
 .whiteButton {
     -webkit-border-image: url(img/whiteButton.png) 0 12 0 12;
