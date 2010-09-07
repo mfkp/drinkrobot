@@ -66,6 +66,14 @@ body.landscape .toolbar > h1 {
     background: none;
     -webkit-border-image: url(img/button.png) 0 5 0 5;
 }
+.next_page {
+    top: 50px;
+    right: 10px;
+}
+.previous_page {
+    top: 50px;
+    left: 6px;
+}
 .blueButton {
     -webkit-border-image: url(img/blueButton.png) 0 5 0 5;
     border-width: 0 5px;
