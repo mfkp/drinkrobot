@@ -6,6 +6,7 @@ Drinkrobot::Application.routes.draw do
   resources :recipes
   resources :favorites
   devise_for :users, :path_names => { :sign_up => "register" }
+  match 'mobile', :to => 'index#mobileview'
   match 'search/recipes/:name', :to => 'recipes#search'
   match 'recipes/ingredients/:name', :to => 'recipes#ingredients'
   match 'ingredients/search/:name', :to => 'ingredients#search'
