@@ -6,7 +6,7 @@
 <ul class="edit rounded"> 
 <% form_for :recipe, :url => { :controller => "recipes", :action => "search", :name => "name" } do |f| %>
 	<%= f.error_messages %>
-	<li><%= f.text_field :name, html => {:placeholder => 'Drink Name'} %></li>
+	<li><%= f.text_field :name, :html => {:placeholder => 'Drink Name'} %></li>
 	<li><%= f.submit "Search", :class => 'greenButton' %></li>
 <% end %>
 </ul>
