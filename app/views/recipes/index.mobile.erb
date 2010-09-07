@@ -16,30 +16,14 @@
 			<% firstchar = "" %>
 			<% for recipe in @recipes %>
 				<% if (recipe.name[0] != firstchar) %>
-					<li class="sep"><%= recipe.name[0].capitalize %></li> 
+					<li class="sep"><%= recipe.name.titleize[0] %></li> 
+					<% firstchar = recipe.name.titleize[0] %>
 				<% end %>
 				<li><%= link_to h(recipe.name), recipe %></li> 
 			<% end %>
 			<br/>
 		</ul>
 	<% end %>
-
 </div>
-
-
-
-    <li class="sep">F</li> 
-    <li><a href="#">Flintstone, <em>Fred</em></a></li> 
-    <li><a href="#">Flintstone, <em>Pebble</em></a></li> 
-    <li><a href="#">Flintstone, <em>Wilma</em></a></li> 
-    <li class="sep">J</li> 
-    <li><a href="#">Jetson, <em>Elroy</em></a></li> 
-    <li><a href="#">Jetson, <em>George</em></a></li> 
-    <li><a href="#">Jetson, <em>Jane</em></a></li> 
-    <li><a href="#">Jetson, <em>Judy</em></a></li> 
-    <li class="sep">R</li> 
-    <li><a href="#">Rubble, <em>Bambam</em></a></li> 
-    <li><a href="#">Rubble, <em>Barney</em></a></li> 
-    <li><a href="#">Rubble, <em>Betty</em></a></li> 
  
 </div> 
