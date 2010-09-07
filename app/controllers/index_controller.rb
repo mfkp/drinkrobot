@@ -14,5 +14,6 @@ class IndexController < ApplicationController
   end
   def mobileview
   	session[:mobile_view] = !session[:mobile_view]
+  	redirect_to :controller => 'index', :action => 'index'
   end
 end
