@@ -1,0 +1,24 @@
+<% @page_title = "DrinkRobot.com - Search"%>
+<div class="toolbar"> 
+    <h1>Search Results</h1> 
+    <a href="/" class="backHome">Home</a> 
+</div> 
+<div id="recipes">
+  <% if @recipes.length == 0 %>
+		<p>No Results Found</p>
+	<% else %>
+		<%= will_paginate @recipes %>
+		<br/>
+		<ul class="edgetoedge"> 
+			<% firstchar = "" %>
+			<% for recipe in @recipes %>
+				<% if (recipe.name[0].chr != firstchar) %>
+					<li class="sep"><%= recipe.name.titleize[0].chr %></li> 
+					<% firstchar = recipe.name.titleize[0].chr %>
+				<% end %>
+				<li><%= link_to h(recipe.name), recipe %></li> 
+			<% end %>
+			<br/>
+		</ul>
+	<% end %>
+</div>
