@@ -13,7 +13,9 @@ class IndexController < ApplicationController
     end
   end
   def mobileview
-  	force_mobile_format
+  	puts session[:mobile_view]
+  	session[:mobile_view] = !session[:mobile_view]
+  	puts session[:mobile_view]
   	redirect_to :controller => 'index', :action => 'index'
   end
 end
