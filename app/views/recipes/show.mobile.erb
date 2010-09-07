@@ -2,21 +2,8 @@
 
 <div class="toolbar"> 
     <h1><%= @recipe.name %></h1> 
-    <a href="/" class="backHome">Back</a> 
+    <a href="/" class="backHome">Home</a> 
 </div> 
-
-
-<div>
-	<h2 style="display:inline;font-size:32px;">
-	  <%=h @recipe.name %>
-	</h2>
-	<div style="float:right;">
-		<% if user_signed_in? %>
-		<a href="#" style="font-size:24px; border: 0px black;"><img src="/images/heart_add.png" /> Add to Favorites</a><br/>
-		<% end %>
-	</div>
-</div>
-
 
 <ul>
 <% count = 0 %>
@@ -27,7 +14,7 @@
 </ul>
 
 <% if @recipe.instructions != "" %>
-<p>
+<p style="margin: 10px;">
   <strong>Mixing Instructions:</strong>
   <%=h @recipe.instructions %>
 </p>
