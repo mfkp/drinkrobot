@@ -1,0 +1,31 @@
+<% @page_title = "DrinkRobot.com - Login"%>
+<div>
+	<div style="float:left;">
+	<div class="toolbar"> 
+		<h1>Sign In</h1> 
+		<a href="/" class="backHome">Back</a> 
+	</div> 
+
+	<%= form_for(resource_name, resource, :url => session_path(resource_name), :html => { :class => "styledform" }) do |f| %>
+	  <p><%= f.label :email %></p>
+	  <p><%= f.text_field :email %></p>
+
+	  <p><%= f.label :password %></p>
+	  <p><%= f.password_field :password %></p>
+
+	  <% if devise_mapping.rememberable? -%>
+		<p><%= f.check_box :remember_me %> <%= f.label :remember_me %></p>
+	  <% end %>
+	  <br/>
+	  <p><%= f.submit "Login", :class => 'super button green' %></p>
+	<% end %>
+
+	<%= render :partial => "devise/shared/links" %>
+
+	</div>
+
+	<div style="float:left; text-align: center; width: 50%;">
+	<h2>Don't have an account?</h2>
+	<p><%= link_to "Sign up for free!", new_registration_path(resource_name), :class => 'super button blue' %></p>
+	</div>
+</div>
