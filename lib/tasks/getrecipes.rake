@@ -6,6 +6,7 @@ namespace :db do
 		require 'open-uri'
 
 		num = 1
+		puts "starting..."
 		while num <= 6214
 		#while num <= 1
 			url = "http://www.webtender.com/db/browse?level=2&dir=drinks&char=*&start=" + num.to_s()
