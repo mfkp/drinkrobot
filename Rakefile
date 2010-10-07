@@ -8,3 +8,4 @@ require 'rake/testtask'
 require 'rake/rdoctask'
 
 Drinkrobot::Application.load_tasks
+
