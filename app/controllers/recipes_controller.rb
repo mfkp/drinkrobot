@@ -5,7 +5,7 @@ class RecipesController < ApplicationController
   # GET /recipes.xml
   def index
     @recipes = Recipe.all_cached.paginate(:per_page => 15, :page => params[:page])
-    @stats = Rails.cache.stats.first.last
+    #@stats = Rails.cache.stats.first.last
 
     respond_to do |format|
       format.html # index.html.erb

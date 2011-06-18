@@ -6,21 +6,3 @@
 <div id="recipes">
   <%= render :partial => 'recipes' %>
 </div>
-
-<br/><br/>
-<h3>Cache Stats</h3>
-
-<table>
-  <tr>
-    <td>Cache hits:</td>
-    <td><%= @stats['get_hits'] %></td>
-  </tr>
-  <tr>
-    <td>Cache misses:</td>
-    <td><%= @stats['get_misses'] %></td>
-  </tr>
-  <tr>
-    <td>Cache flushes:</td>
-    <td><%= @stats['cmd_flush'] %></td>
-  </tr>
-</table>
