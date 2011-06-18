@@ -78,7 +78,7 @@ class IngredientsRecipesQuantitiesController < ApplicationController
     @ingredients_recipes_quantities.destroy
 
     respond_to do |format|
-      format.html { redirect_to(ingredients_recipes_quantities_url) }
+      format.html { redirect_to(ingredients_recipes_quantity_url) }
       format.xml  { head :ok }
     end
   end

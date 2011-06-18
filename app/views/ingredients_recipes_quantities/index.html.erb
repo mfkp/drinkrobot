@@ -1,13 +1,24 @@
-<h1>Listing ingredients_recipes_quantities</h1>
+<h2>Listing ingredients_recipes_quantities</h2>
 
 <table>
   <tr>
+  	<th>Id</th>
+  	<th>Recipe</th>
+  	<th>Ingredient</th>
+  	<th>Quantity</th>
+  	<th></th>
+  	<th></th>
+  	<th></th>
   </tr>
 
 <% for ingredients_recipes_quantities in @ingredients_recipes_quantities %>
   <tr>
+  	<td><%= ingredients_recipes_quantities.id %></td>
+  	<td><%= ingredients_recipes_quantities.recipe_id %></td>
+  	<td><%= ingredients_recipes_quantities.ingredient_id %></td>
+  	<td><%= ingredients_recipes_quantities.quantity_id %></td>
     <td><%= link_to 'Show', ingredients_recipes_quantities %></td>
-    <td><%= link_to 'Edit', edit_ingredients_recipes_quantities_path(ingredients_recipes_quantities) %></td>
+    <td><%= link_to 'Edit', edit_ingredients_recipes_quantity_path(ingredients_recipes_quantities) %></td>
     <td><%= link_to 'Destroy', ingredients_recipes_quantities, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
@@ -15,4 +26,4 @@
 
 <br />
 
-<%= link_to 'New ingredients_recipes_quantities', new_ingredients_recipes_quantities_path %>
+<%= link_to 'New ingredients_recipes_quantities', new_ingredients_recipes_quantity_path %>

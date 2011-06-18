@@ -1,7 +1,10 @@
 source :gemcutter
 gem 'nokogiri'
 gem 'will_paginate'
-gem 'rails'
+gem 'rails', '3.0.9'
 gem 'devise', '>=1.1.rc0'
 gem 'bundler', '>=0.9.21'
-gem 'mysql'
+#gem 'mysql'
+gem 'sqlite3'
+#gem 'dalli'
+#gem 'kgio'

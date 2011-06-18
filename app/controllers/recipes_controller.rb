@@ -4,7 +4,8 @@ class RecipesController < ApplicationController
   # GET /recipes
   # GET /recipes.xml
   def index
-    @recipes = Recipe.find(:all).paginate(:per_page => 15, :page => params[:page])
+    @recipes = Recipe.all_cached.paginate(:per_page => 15, :page => params[:page])
+    @stats = Rails.cache.stats.first.last
 
     respond_to do |format|
       format.html # index.html.erb
@@ -36,40 +37,50 @@ class RecipesController < ApplicationController
   
   # GET /search/ingredients/string
   def search_by_ingredients
-  	@ingredients = params[:ingredients].split(',')
+  	@userIngredients = params[:ingredients].split(',')
   	@results = []
-  	recipes = []
-  	ingreds = ""
+#  	recipes = []
+#  	ingreds = ""
   	
-  	@ingredients.each do |ingred|
-  		ingreds += ingred.to_s
-  		if ingred != @ingredients.last
-  			ingreds += ", "
-  		end
-  	end
-  	
-	sqlStr = "SELECT distinct recipe_id, count(*) AS Number FROM ingredients_recipes_quantities 
-			  WHERE ingredient_id IN(" + ingreds + ") GROUP BY recipe_id  
-			  HAVING Number <= " + @ingredients.length.to_s
-	possiblerecipes = IngredientsRecipesQuantity.find_by_sql(sqlStr)
-	
-	possiblerecipes.each do |recipe|
-		recipes.push(Recipe.find_by_id(recipe.recipe_id))
-	end
+#  	@ingredients.each do |ingred|
+#  		ingreds += ingred.to_s
+#  		if ingred != @ingredients.last
+#  			ingreds += ", "
+#  		end
+#  	end
 
-  	recipes.each do |recipe|
-		if @ingredients.include? recipe.ingredients.first.id.to_s
-			match = true
-			recipe.ingredients.each do |ingredient|
-				if (!@ingredients.include? ingredient.id.to_s) && (match)
-					match = false
-				end
-			end
-			if match
-				@results.push(recipe)
-			end
-		end
-  	end
+    Recipe.all_cached.each do |recipe| 
+      ingredients = []
+      recipe.ingredients.each do |ingredient| 
+        ingredients.push(ingredient.id.to_s)
+      end
+      if ((ingredients-@userIngredients).empty?)
+        @results.push(recipe)
+      end
+    end
+  	
+#	sqlStr = "SELECT distinct recipe_id, count(*) AS Number FROM ingredients_recipes_quantities 
+#			  WHERE ingredient_id IN(" + ingreds + ") GROUP BY recipe_id  
+#			  HAVING Number <= " + @ingredients.length.to_s
+#	possiblerecipes = IngredientsRecipesQuantity.find_by_sql(sqlStr)
+#	
+#	possiblerecipes.each do |recipe|
+#		recipes.push(Recipe.find_by_id(recipe.recipe_id))
+#	end
+
+#  	recipes.each do |recipe|
+#		if @ingredients.include? recipe.ingredients.first.id.to_s
+#			match = true
+#			recipe.ingredients.each do |ingredient|
+#				if (!@ingredients.include? ingredient.id.to_s) && (match)
+#					match = false
+#				end
+#			end
+#			if match
+#				@results.push(recipe)
+#			end
+#		end
+ # 	end
   	@recipes = @results.paginate(:per_page => 15, :page => params[:page])
 
     respond_to do |format|
