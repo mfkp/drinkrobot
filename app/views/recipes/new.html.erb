@@ -2,7 +2,7 @@
 
 <h2>New Drink Recipe</h2>
 
-<% form_for(@recipe, :html => { :class => "styledform" }) do |f| %>
+<%= form_for(@recipe, :html => { :class => "styledform" }) do |f| %>
   <%= f.error_messages %>
   <p>
     <%= f.label :name %><br />
