@@ -42,6 +42,8 @@ module Drinkrobot
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+
+    config.assets.initialize_on_precompile = false
     
     Rails.application.config.secret_token = '4d9f38061a479fbfdfc8fd08b465077335be84e0995f32ff4cbe18d6c4e0e004abc22d9156d444c608d06ef573e0b7bad2a82d3ab016b51329ac5e29e8093c56'
   end
