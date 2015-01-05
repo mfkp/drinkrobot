@@ -4,3 +4,5 @@ db/*.sqlite3
 Capfile
 config/deploy.rb
 tmp/*
+
+.bundle/config
