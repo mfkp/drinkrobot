@@ -26,15 +26,5 @@ test:
 # Example:
 #   sqlite3://myuser:mypass@localhost/full/path/to/somedatabase
 #
-# production:
-#   url: <%= ENV["DATABASE_URL"] %>
-
 production:
-  adapter: mysql2
-  encoding: utf8
-  pool: 5
-  database: <%= ENV["DB_NAME"] %>
-  username: <%= ENV["DB_USER"] %>
-  password: <%= ENV["DB_PASS"] %>
-  host: <%= ENV["DB_HOST"] %>
-  port: <%= ENV["DB_PORT"] %>
+  url: <%= ENV["DATABASE_URL"] %>
