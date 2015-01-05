@@ -3,6 +3,7 @@
 Devise.setup do |config|
   # Configure the e-mail address which will be shown in DeviseMailer.
   config.mailer_sender = "noreply@drinkrobot.com"
+  # config.secret_key = '29697bec4e6bfd3ee148b644afbe12c407b64f0708ede12c349f7fc854cd174116d404d30ed414389c0982c5bc2d5d36781e13c3bbd8b952a9e46df149128f64'
 
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating an user. By default is

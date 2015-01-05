@@ -3,7 +3,7 @@
 <div style="float:left;">
 <h2>Login</h2>
 
-<%= form_for(resource_name, resource, :url => session_path(resource_name), :html => { :class => "styledform" }) do |f| %>
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :class => "styledform" }) do |f| %>
   <p><%= f.label :email %></p>
   <p><%= f.text_field :email %></p>
 
